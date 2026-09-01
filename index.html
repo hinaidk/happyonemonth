@@ -45,7 +45,9 @@
         right: -50px;
         transform: rotate(15deg);
     }
-    /* HERO */
+    /* =========================
+       APRESENTAÇÃO
+    ========================= */
     .hero {
         min-height: 100vh;
         display: flex;
@@ -53,166 +55,101 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 40px 20px;
+        padding: 40px 25px;
     }
     .small-text {
         font-size: 14px;
         letter-spacing: 2px;
         color: #b47b93;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
     }
-    h1 {
+    .hero h1 {
         font-family: "Cormorant Garamond", serif;
-        font-size: clamp(48px, 12vw, 80px);
+        font-size: clamp(55px, 14vw, 90px);
         font-weight: 500;
+        line-height: 0.95;
         color: #9b5f79;
-        line-height: 1;
-        margin-bottom: 18px;
+        margin-bottom: 25px;
     }
     .subtitle {
-        font-size: 16px;
-        color: #8d6576;
         max-width: 500px;
+        font-size: 16px;
         line-height: 1.8;
+        color: #8d6576;
         margin-bottom: 28px;
     }
     .spotify {
         display: inline-block;
         text-decoration: none;
         color: #a85f7c;
-        background: rgba(255, 255, 255, 0.75);
+        background: rgba(255,255,255,0.75);
         border: 1px solid #f1cad9;
-        padding: 11px 20px;
+        padding: 12px 22px;
         border-radius: 30px;
         transition: 0.25s;
-        margin-bottom: 35px;
     }
     .spotify:hover {
         transform: translateY(-2px);
-        background: #fff;
+        background: #ffffff;
     }
-    /* ESTRELINHA */
-    .star-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 70px;
-        height: 70px;
-        text-decoration: none;
-        color: #d783a3;
-        font-size: 45px;
-        background: rgba(255, 255, 255, 0.7);
-        border: 1px solid #f2cada;
-        border-radius: 50%;
-        box-shadow: 0 8px 25px rgba(185, 112, 143, 0.12);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        cursor: pointer;
-        position: relative;
-        z-index: 20;
-        pointer-events: auto;
-    }
-    .star-link:hover {
-        transform: rotate(10deg) scale(1.08);
-        box-shadow: 0 10px 30px rgba(185, 112, 143, 0.2);
-    }
-    .star-text {
-        font-size: 12px;
-        color: #b47b93;
-        margin-top: 10px;
-    }
-    /* CONTADOR */
-    #contador {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 70px 20px;
-    }
-    .count-title {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 42px;
-        color: #9b5f79;
-        margin-bottom: 10px;
-    }
-    .count-subtitle {
-        color: #a47789;
-        font-size: 14px;
-        margin-bottom: 35px;
-    }
-    .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-    .time-box {
-        min-width: 75px;
-        padding: 16px 10px;
-        background: rgba(255, 255, 255, 0.78);
-        border: 1px solid #f1cad9;
-        border-radius: 18px;
-        box-shadow: 0 8px 25px rgba(185, 112, 143, 0.08);
-    }
-    .time-number {
-        display: block;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 32px;
-        color: #9b5f79;
-    }
-    .time-label {
-        font-size: 10px;
-        letter-spacing: 1px;
-        color: #b47b93;
-    }
-    /* CARTA */
+    /* =========================
+       CARTA
+    ========================= */
     .letter {
         max-width: 720px;
         margin: 0 auto;
-        padding: 80px 25px;
-        text-align: center;
+        padding: 100px 25px;
     }
     .letter h2 {
+        text-align: center;
         font-family: "Cormorant Garamond", serif;
-        font-size: 42px;
+        font-size: 48px;
+        font-weight: 500;
         color: #9b5f79;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     .letter p {
         font-family: "Cormorant Garamond", serif;
         font-size: 21px;
         line-height: 1.8;
         color: #70485b;
-        margin-bottom: 18px;
+        margin-bottom: 22px;
     }
-    /* FOTOS */
+    /* =========================
+       FOTOS
+    ========================= */
     .photos {
-        padding: 60px 20px;
         max-width: 900px;
         margin: 0 auto;
+        padding: 80px 20px;
     }
     .photos h2 {
         text-align: center;
         font-family: "Cormorant Garamond", serif;
-        font-size: 42px;
+        font-size: 48px;
+        font-weight: 500;
         color: #9b5f79;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
     }
     .photo-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        grid-template-columns:
+            repeat(auto-fit, minmax(230px, 1fr));
         gap: 25px;
     }
     .photo {
-        background: white;
+        background: #ffffff;
         padding: 12px 12px 20px;
         border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(112, 72, 91, 0.1);
+        box-shadow:
+            0 10px 30px rgba(112,72,91,0.10);
         transform: rotate(-1deg);
     }
     .photo:nth-child(2) {
         transform: rotate(1deg);
+    }
+    .photo:nth-child(3) {
+        transform: rotate(-0.5deg);
     }
     .photo img {
         width: 100%;
@@ -221,55 +158,133 @@
     }
     .photo p {
         text-align: center;
-        margin-top: 12px;
         font-family: "Cormorant Garamond", serif;
-        font-size: 18px;
+        font-size: 19px;
         color: #8f5c72;
+        margin-top: 13px;
     }
-    /* FINAL */
-    .ending {
-        min-height: 70vh;
+    .photo-placeholder {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff0f6;
+        border-radius: 4px;
+        font-size: 55px;
+        color: #d783a3;
+    }
+    /* =========================
+       CONTADOR
+    ========================= */
+    .countdown-section {
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 70px 25px;
+        padding: 80px 20px;
+    }
+    .countdown-section h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 48px;
+        font-weight: 500;
+        color: #9b5f79;
+        margin-bottom: 12px;
+    }
+    .countdown-section > p {
+        font-size: 15px;
+        color: #a47789;
+        margin-bottom: 40px;
+    }
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .time-box {
+        min-width: 78px;
+        padding: 18px 10px;
+        background: rgba(255,255,255,0.8);
+        border: 1px solid #f1cad9;
+        border-radius: 18px;
+        box-shadow:
+            0 8px 25px rgba(185,112,143,0.08);
+    }
+    .time-number {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 34px;
+        color: #9b5f79;
+    }
+    .time-label {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 1px;
+        color: #b47b93;
+        margin-top: 3px;
+    }
+    /* =========================
+       FINALIZAÇÃO
+    ========================= */
+    .ending {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 25px;
     }
     .ending h2 {
         font-family: "Cormorant Garamond", serif;
-        font-size: 48px;
+        font-size: 52px;
+        font-weight: 500;
+        line-height: 1.05;
         color: #9b5f79;
         margin-bottom: 25px;
     }
     .ending p {
         max-width: 600px;
+        font-size: 16px;
         line-height: 1.8;
         color: #806071;
     }
     .heart {
-        font-size: 60px;
+        font-size: 65px;
         color: #d783a3;
-        margin-top: 30px;
+        margin-top: 35px;
     }
+    /* =========================
+       CELULAR
+    ========================= */
     @media (max-width: 600px) {
-        .countdown {
-            gap: 8px;
+        .hero h1 {
+            font-size: 64px;
         }
-        .time-box {
-            min-width: 68px;
+        .letter h2,
+        .photos h2,
+        .countdown-section h2 {
+            font-size: 40px;
         }
         .letter p {
             font-size: 19px;
         }
         .ending h2 {
-            font-size: 40px;
+            font-size: 43px;
+        }
+        .time-box {
+            min-width: 68px;
         }
     }
 </style>
 </head>
 <body>
-<!-- HERO -->
+<!-- =========================
+     1. APRESENTAÇÃO
+========================= -->
 <section class="hero">
     <div class="small-text">
         para o meu gatinho ♡
@@ -290,41 +305,10 @@
     >
         ouvir no Spotify ♫
     </a>
-    <a href="#contador" class="star-link" aria-label="ver contador">
-        ✦
-    </a>
-    <div class="star-text">
-        toca na estrelinha ♡
-    </div>
 </section>
-<!-- CONTADOR -->
-<section id="contador">
-    <h2 class="count-title">
-        contando os dias...
-    </h2>
-    <p class="count-subtitle">
-        até o nosso encontro em outubro ♡
-    </p>
-    <div class="countdown">
-        <div class="time-box">
-            <span class="time-number" id="days">00</span>
-            <span class="time-label">DIAS</span>
-        </div>
-        <div class="time-box">
-            <span class="time-number" id="hours">00</span>
-            <span class="time-label">HORAS</span>
-        </div>
-        <div class="time-box">
-            <span class="time-number" id="minutes">00</span>
-            <span class="time-label">MINUTOS</span>
-        </div>
-        <div class="time-box">
-            <span class="time-number" id="seconds">00</span>
-            <span class="time-label">SEGUNDOS</span>
-        </div>
-    </div>
-</section>
-<!-- CARTA -->
+<!-- =========================
+     2. CARTA
+========================= -->
 <section class="letter">
     <h2>
         uma cartinha pra você ♡
@@ -366,39 +350,102 @@
         feliz 1 mês pra nós!! 🩷
     </p>
 </section>
-<!-- FOTOS -->
+<!-- =========================
+     3. FOTOS
+========================= -->
 <section class="photos">
     <h2>
         nossos momentinhos ♡
     </h2>
     <div class="photo-grid">
         <div class="photo">
-            <img src="content.png" alt="nosso momentinho">
-            <p>fofinhos :3</p>
+            <img
+                src="content.png"
+                alt="nosso momentinho"
+            >
+            <p>
+                fofinhos :3
+            </p>
         </div>
         <div class="photo">
-            <img src="image.png" alt="nosso momentinho">
-            <p>:p♡</p>
+            <img
+                src="image.png"
+                alt="nosso momentinho"
+            >
+            <p>
+                :p♡
+            </p>
         </div>
         <div class="photo">
-            <div style="
-                width: 100%;
-                aspect-ratio: 1 / 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #fff0f6;
-                border-radius: 4px;
-                font-size: 50px;
-                color: #d783a3;
-            ">
+            <div class="photo-placeholder">
                 ♡
             </div>
-            <p>uma fotinha nossa</p>
+            <p>
+                uma fotinha nossa
+            </p>
         </div>
     </div>
 </section>
-<!-- FINAL -->
+<!-- =========================
+     4. TEMPO ATÉ SE VEREM
+========================= -->
+<section class="countdown-section">
+    <h2>
+        até o nosso encontro ♡
+    </h2>
+    <p>
+        contando os dias até a gente finalmente se ver.
+    </p>
+    <div class="countdown">
+        <div class="time-box">
+            <span
+                class="time-number"
+                id="days"
+            >
+                00
+            </span>
+            <span class="time-label">
+                DIAS
+            </span>
+        </div>
+        <div class="time-box">
+            <span
+                class="time-number"
+                id="hours"
+            >
+                00
+            </span>
+            <span class="time-label">
+                HORAS
+            </span>
+        </div>
+        <div class="time-box">
+            <span
+                class="time-number"
+                id="minutes"
+            >
+                00
+            </span>
+            <span class="time-label">
+                MINUTOS
+            </span>
+        </div>
+        <div class="time-box">
+            <span
+                class="time-number"
+                id="seconds"
+            >
+                00
+            </span>
+            <span class="time-label">
+                SEGUNDOS
+            </span>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     5. FINALIZAÇÃO
+========================= -->
 <section class="ending">
     <h2>
         feliz 1 mês,<br>
@@ -414,7 +461,9 @@
         ♡
     </div>
 </section>
-<!-- CONTADOR -->
+<!-- =========================
+     CONTADOR
+========================= -->
 <script>
     const targetDate =
         new Date("2026-10-28T00:00:00").getTime();
@@ -459,7 +508,10 @@
             String(seconds).padStart(2, "0");
     }
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    setInterval(
+        updateCountdown,
+        1000
+    );
 </script>
 </body>
 </html>
