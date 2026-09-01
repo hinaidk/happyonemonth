@@ -34,8 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* pequenos corações no fundo */
-
         .background-hearts {
             position: fixed;
             inset: 0;
@@ -75,361 +73,284 @@
             animation-delay: 1s;
         }
 
+        .heart:nth-child(5) {
+            left: 50%;
+            top: 10%;
+            animation-delay: 3s;
+        }
+
         @keyframes float {
             0%, 100% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(0);
             }
 
             50% {
-                transform: translateY(-20px) rotate(8deg);
+                transform: translateY(-20px);
             }
         }
 
-        /* abertura */
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
 
         .hero {
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 30px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-card {
-            width: 100%;
-            max-width: 650px;
-            padding: 55px 30px;
-            background: rgba(255, 250, 248, 0.82);
-            border: 1px solid rgba(214, 165, 180, 0.35);
-            border-radius: 35px;
-            box-shadow: 0 20px 60px rgba(126, 82, 98, 0.10);
-            backdrop-filter: blur(10px);
+            padding: 40px 20px;
         }
 
         .small-title {
-            font-size: 14px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #b98396;
-            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: #b17c8c;
+            margin-bottom: 12px;
         }
 
-        h1 {
+        .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(55px, 15vw, 90px);
-            font-weight: 600;
-            color: #9a6275;
+            font-size: clamp(55px, 12vw, 95px);
+            font-weight: 500;
+            color: #714c59;
             line-height: 0.9;
-            margin-bottom: 20px;
         }
 
-        .subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 25px;
-            color: #87616d;
-            margin-bottom: 35px;
+        .hero p {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #9a707d;
         }
 
         .star-button {
+            margin-top: 45px;
+            width: 75px;
+            height: 75px;
             border: none;
-            background: transparent;
-            font-size: 55px;
-            color: #d69bad;
+            border-radius: 50%;
+            background: #f4d9e1;
+            color: #9b6577;
+            font-size: 34px;
             cursor: pointer;
-            transition: transform 0.3s ease;
-            animation: starGlow 2s infinite ease-in-out;
+            box-shadow: 0 10px 30px rgba(130, 80, 100, 0.12);
+            transition: 0.3s;
         }
 
         .star-button:hover {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.1) rotate(8deg);
         }
-
-        @keyframes starGlow {
-            0%, 100% {
-                filter: drop-shadow(0 0 4px rgba(214, 155, 173, 0.2));
-            }
-
-            50% {
-                filter: drop-shadow(0 0 15px rgba(214, 155, 173, 0.55));
-            }
-        }
-
-        .click-text {
-            margin-top: 5px;
-            font-size: 12px;
-            color: #b78a99;
-        }
-
-        /* seções */
 
         section {
-            width: 100%;
-            max-width: 900px;
-            margin: auto;
-            padding: 90px 22px;
-            position: relative;
-            z-index: 1;
+            padding: 80px 0;
         }
 
         .section-title {
-            text-align: center;
             font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 600;
-            color: #9a6275;
+            text-align: center;
+            font-size: 42px;
+            font-weight: 500;
+            color: #714c59;
             margin-bottom: 35px;
         }
 
-        /* contador */
-
-        .countdown-section {
-            display: none;
-        }
-
-        .countdown-section.show {
-            display: block;
-            animation: appear 0.8s ease;
-        }
-
-        @keyframes appear {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .countdown-box {
-            background: rgba(255, 250, 248, 0.88);
-            border: 1px solid rgba(214, 165, 180, 0.35);
-            border-radius: 30px;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 15px 45px rgba(126, 82, 98, 0.08);
-        }
-
-        .countdown-subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            margin-bottom: 25px;
-            color: #86616d;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .time {
-            background: #f8e8ed;
-            border-radius: 18px;
-            min-width: 75px;
-            padding: 15px 10px;
-        }
-
-        .time span {
-            display: block;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 35px;
-            font-weight: 600;
-            color: #9a6275;
-        }
-
-        .time small {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #a97989;
-        }
-
-        /* carta */
-
         .letter {
-            background: rgba(255, 250, 248, 0.9);
+            background: rgba(255, 250, 248, 0.82);
+            border: 1px solid #f0dce2;
             border-radius: 30px;
-            padding: 40px 28px;
-            box-shadow: 0 15px 45px rgba(126, 82, 98, 0.08);
-            border: 1px solid rgba(214, 165, 180, 0.30);
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(120, 70, 90, 0.07);
         }
 
         .letter p {
             font-family: 'Cormorant Garamond', serif;
             font-size: 21px;
-            line-height: 1.7;
+            line-height: 1.65;
+            color: #694c57;
             margin-bottom: 18px;
-            color: #6f505b;
         }
 
-        .letter .opening {
-            font-size: 25px;
-            color: #9a6275;
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
         }
 
-        /* música */
+        .photo {
+            aspect-ratio: 1 / 1;
+            border-radius: 25px;
+            background: linear-gradient(145deg, #f6e4e9, #fff8f6);
+            border: 1px dashed #d6a5b4;
+            overflow: hidden;
+            position: relative;
+        }
 
-        .music-box {
-            background: rgba(255, 250, 248, 0.9);
-            border-radius: 30px;
-            padding: 30px 20px;
-            box-shadow: 0 15px 45px rgba(126, 82, 98, 0.08);
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            padding: 10px;
+            background: rgba(255, 250, 248, 0.88);
+            color: #714c59;
+            font-size: 13px;
             text-align: center;
         }
 
+        .photo-placeholder {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #b17c8c;
+            font-size: 14px;
+        }
+
+        .music-box {
+            background: rgba(255, 250, 248, 0.85);
+            border: 1px solid #f0dce2;
+            border-radius: 30px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(120, 70, 90, 0.07);
+        }
+
         .music-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
+            font-size: 45px;
+            margin-bottom: 15px;
         }
 
         .music-box p {
             margin-bottom: 20px;
-            color: #87616d;
+            color: #8e6975;
         }
 
         .spotify-button {
             display: inline-block;
+            text-decoration: none;
+            background: #dcaabb;
+            color: white;
             padding: 13px 25px;
             border-radius: 30px;
-            text-decoration: none;
-            background: #ead0d9;
-            color: #714c59;
-            font-weight: 600;
-            transition: 0.3s ease;
+            transition: 0.3s;
+            font-size: 14px;
         }
 
         .spotify-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(126, 82, 98, 0.12);
+            transform: translateY(-2px);
+            background: #cf95a8;
         }
 
-        /* fotos */
+        .countdown-section {
+            display: none;
+            text-align: center;
+        }
 
-        .photos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
+        .countdown-section.show {
+            display: block;
+        }
 
-.photo {
-    aspect-ratio: 1 / 1;
-    border-radius: 25px;
-    background: linear-gradient(145deg, #f6e4e9, #fff8f6);
-    border: 1px dashed #d6a5b4;
-    overflow: hidden;
-    position: relative;
-    padding: 0;
-}
+        .countdown-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            margin-bottom: 25px;
+            color: #805968;
+        }
 
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
 
-.photo p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 10px;
-    background: rgba(255, 250, 248, 0.85);
-    color: #714c59;
-    font-size: 13px;
-    text-align: center;
-}
+        .time-box {
+            background: rgba(255, 250, 248, 0.9);
+            border: 1px solid #efd8df;
+            border-radius: 20px;
+            padding: 20px 10px;
+        }
 
-        /* final */
+        .time-box span {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: #714c59;
+        }
+
+        .time-box small {
+            color: #a27683;
+            font-size: 11px;
+        }
 
         .ending {
             text-align: center;
-            padding: 100px 20px 120px;
+            padding: 100px 20px;
         }
 
-        .ending .big-heart {
-            font-size: 50px;
+        .big-heart {
+            font-size: 70px;
+            color: #d99caf;
             margin-bottom: 20px;
-            animation: heartbeat 1.7s infinite ease-in-out;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.15);
-            }
         }
 
         .ending h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 46px;
-            color: #9a6275;
-            margin-bottom: 15px;
+            font-size: 42px;
+            font-weight: 500;
+            color: #714c59;
         }
 
         .ending p {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 23px;
-            color: #87616d;
+            margin-top: 12px;
+            color: #98717d;
         }
 
         .signature {
-            margin-top: 25px;
-            font-size: 14px;
-            letter-spacing: 2px;
+            margin-top: 35px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
             color: #b17c8c;
         }
 
-        /* celular */
+        @media (max-width: 700px) {
 
-        @media (max-width: 650px) {
-
-            section {
-                padding: 70px 17px;
-            }
-
-            .hero-card {
-                padding: 45px 20px;
-            }
-
-            .section-title {
-                font-size: 42px;
+            .photos {
+                grid-template-columns: 1fr;
+                max-width: 330px;
+                margin: auto;
             }
 
             .letter {
-                padding: 30px 22px;
+                padding: 25px;
             }
 
             .letter p {
                 font-size: 19px;
             }
 
-            .photos {
-                grid-template-columns: 1fr;
+            .section-title {
+                font-size: 36px;
             }
 
-            .photo {
-                aspect-ratio: 16 / 10;
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .time {
-                min-width: 68px;
-            }
-
-            .time span {
-                font-size: 30px;
-            }
         }
 
     </style>
@@ -442,206 +363,189 @@
         <div class="heart">♡</div>
         <div class="heart">♡</div>
         <div class="heart">♡</div>
+        <div class="heart">♡</div>
     </div>
 
 
-    <!-- ABERTURA -->
+    <!-- COMEÇO -->
 
     <div class="hero">
 
-        <div class="hero-card">
-
-            <div class="small-title">
-                para o meu gatinho ♡
-            </div>
-
-            <h1>
-                um mês<br>
-                de nós
-            </h1>
-
-            <div class="subtitle">
-                uma pequena surpresa para você, Rael.
-            </div>
-
-            <button class="star-button" onclick="showCountdown()">
-                ✦
-            </button>
-
-            <div class="click-text">
-                clique na estrelinha ♡
-            </div>
-
+        <div class="small-title">
+            para o meu gatinho ♡
         </div>
+
+        <h1>
+            um mês<br>
+            de nós
+        </h1>
+
+        <p>
+            uma pequena surpresa para o meu Rael...
+        </p>
+
+        <button class="star-button" onclick="showCountdown()">
+            ✦
+        </button>
+
+        <p>
+            clique na estrelinha ♡
+        </p>
 
     </div>
 
 
-    <!-- CONTADOR -->
+    <main class="container">
 
-    <section id="countdownSection" class="countdown-section">
 
-        <h2 class="section-title">
-            falta tão pouquinho...
-        </h2>
+        <!-- CARTA -->
 
-        <div class="countdown-box">
+        <section>
 
-            <div class="countdown-subtitle">
-                até o nosso dia ♡
+            <h2 class="section-title">
+                para você, meu amor ♡
+            </h2>
+
+            <div class="letter">
+
+                <p>
+                    oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
+                </p>
+
+                <p>
+                    saiba que eu sou eternamente grata por ter você na minha vida. você me enche de vontade de viver, de aproveitar cada momento ao seu lado e, principalmente, de te fazer feliz. muito obrigada por ser essa pessoa incrível que sempre tenta fazer dar certo e que se esforça por nós. eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas, porque são elas que tornam tudo ainda mais especial.
+                </p>
+
+                <p>
+                    eu tenho certeza de que você é o amor da minha vida, porque eu nunca conheci alguém que me entendesse como você me entende. você me agrada, faz o que eu gosto, realiza minhas vontades e sempre tenta me ver feliz. além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
+                </p>
+
+                <p>
+                    esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter você comigo e o quanto quero continuar construindo muitas memórias ao seu lado. e eu tô MUITO ansiosa pra novembro chegar logo, porque finalmente vamos poder nos ver e viver tudo isso juntinhos de verdade. só de pensar que vou poder te encontrar, ficar pertinho de você e finalmente passar um tempinho ao seu lado, eu já fico toda bobinha. mal posso esperar por esse dia!!
+                </p>
+
+                <p>
+                    espero que esse seja só o começo de uma história muito, muito longa, cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo, meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês de muitos outros, MUITOS OUTROS!
+                </p>
+
+                <p>
+                    feliz 1 mês pra nós!! 🩷
+                </p>
+
             </div>
+
+        </section>
+
+
+        <!-- FOTOS -->
+
+        <section>
+
+            <h2 class="section-title">
+                nossos momentos 📷
+            </h2>
+
+            <div class="photos">
+
+                <div class="photo">
+                    <img src="conteúdo.png" alt="fofinhos">
+                    <p>fofinhos :3</p>
+                </div>
+
+                <div class="photo">
+                    <img src="imagem.png" alt="eu te amo">
+                    <p>:p♡</p>
+                </div>
+
+                <div class="photo">
+
+                    <div class="photo-placeholder">
+                        📷
+                        <br><br>
+                        uma fotinha nossa
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MÚSICA -->
+
+        <section>
+
+            <h2 class="section-title">
+                nossa música 🎵
+            </h2>
+
+            <div class="music-box">
+
+                <div class="music-icon">
+                    ♫
+                </div>
+
+                <p>
+                    uma musiquinha pra lembrar de nós dois ♡
+                </p>
+
+                <a
+                    class="spotify-button"
+                    href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
+                    target="_blank"
+                >
+                    ouvir nossa música ♡
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTADOR -->
+
+        <section
+            id="countdownSection"
+            class="countdown-section"
+        >
+
+            <h2 class="section-title">
+                até o nosso encontro ♡
+            </h2>
+
+            <p class="countdown-text">
+                cada dia que passa é um dia a menos para finalmente te ver.
+            </p>
 
             <div class="countdown">
 
-                <div class="time">
+                <div class="time-box">
                     <span id="days">00</span>
                     <small>dias</small>
                 </div>
 
-                <div class="time">
+                <div class="time-box">
                     <span id="hours">00</span>
                     <small>horas</small>
                 </div>
 
-                <div class="time">
+                <div class="time-box">
                     <span id="minutes">00</span>
                     <small>minutos</small>
                 </div>
 
-                <div class="time">
+                <div class="time-box">
                     <span id="seconds">00</span>
                     <small>segundos</small>
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- CARTA -->
-
-    <section>
-
-        <h2 class="section-title">
-            uma cartinha pra você ♡
-        </h2>
-
-        <div class="letter">
-
-            <p class="opening">
-                oii, meu gatinho!
-            </p>
-
-            <p>
-                venho aqui comemorar o nosso primeiro mês juntinhos!!
-            </p>
-
-            <p>
-                saiba que eu sou eternamente grata por ter você na minha vida.
-                você me enche de vontade de viver, de aproveitar cada momento ao seu lado e,
-                principalmente, de te fazer feliz. muito obrigada por ser essa pessoa incrível
-                que sempre tenta fazer dar certo e que se esforça por nós.
-                eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
-                porque são elas que tornam tudo ainda mais especial.
-            </p>
-
-            <p>
-                eu tenho certeza de que você é o amor da minha vida, porque eu nunca conheci
-                alguém que me entendesse como você me entende. você me agrada, faz o que eu gosto,
-                realiza minhas vontades e sempre tenta me ver feliz. além de ser o garoto mais lindo
-                do mundo, de verdade. eu amo ficar vendo suas fotinhas e fico rindo igual bobinha
-                olhando pra você KKKKK.
-            </p>
-
-            <p>
-                esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter você comigo
-                e o quanto quero continuar construindo muitas memórias ao seu lado.
-                e eu tô MUITO ansiosa pra novembro chegar logo, porque finalmente vamos poder
-                nos ver e viver tudo isso juntinhos de verdade.
-                só de pensar que vou poder te encontrar, ficar pertinho de você e finalmente
-                passar um tempinho ao seu lado, eu já fico toda bobinha.
-                mal posso esperar por esse dia!!
-            </p>
-
-            <p>
-                espero que esse seja só o começo de uma história muito, muito longa,
-                cheia de momentos bons, risadas, carinho e muito amor.
-                obrigada por tudo, meu amor.
-                eu te amo muitão e tenho certeza de que esse é o primeiro mês de muitos outros,
-                MUITOS OUTROS!
-            </p>
-
-            <p>
-                feliz 1 mês pra nós!! 🩷
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- MÚSICA -->
-
-    <section>
-
-        <h2 class="section-title">
-            uma música pra nós 🎧
-        </h2>
-
-        <div class="music-box">
-
-            <div class="music-icon">
-                ♫
-            </div>
-
-            <p>
-                aperta aqui pra ouvir a nossa musiquinha ♡
-            </p>
-
-            <a
-                class="spotify-button"
-                href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
-                target="_blank"
-            >
-                ouvir no Spotify ♡
-            </a>
-
-        </div>
-
-    </section>
-
-
-   <!-- FOTOS -->
-
-<section>
-
-    <h2 class="título-seção">
-        nossos momentos 📷
-    </h2>
-<div class="photos">
-
-    <div class="photo">
-        <img src="conteúdo.png" alt="fofinhos">
-        <p>fofinhos :3</p>
-    </div>
-
-    <div class="photo">
-        <img src="imagem.png" alt="eu te amo">
-        <p>:p♡</p>
-    </div>
-
-    <div class="photo">
-        📷
-        <br><br>
-        uma fotinha nossa
-    </div>
-
-</div>
-
-</section>
-    
+    </main>
 
 
     <!-- FINAL -->
@@ -669,32 +573,36 @@
 
     <script>
 
-        /* mostrar contador */
-
         function showCountdown() {
 
-            const section = document.getElementById("countdownSection");
+            const section =
+                document.getElementById("countdownSection");
 
             section.classList.add("show");
 
             setTimeout(() => {
+
                 section.scrollIntoView({
                     behavior: "smooth"
                 });
+
             }, 100);
 
         }
 
 
-        /* contador */
+        const targetDate =
+            new Date("October 28, 2026 00:00:00").getTime();
 
-        const targetDate = new Date("October 28, 2026 00:00:00").getTime();
 
         function updateCountdown() {
 
-            const now = new Date().getTime();
+            const now =
+                new Date().getTime();
 
-            const difference = targetDate - now;
+            const difference =
+                targetDate - now;
+
 
             if (difference <= 0) {
 
@@ -704,24 +612,34 @@
                 document.getElementById("seconds").innerText = "00";
 
                 return;
-
             }
 
-            const days = Math.floor(
-                difference / (1000 * 60 * 60 * 24)
-            );
 
-            const hours = Math.floor(
-                (difference / (1000 * 60 * 60)) % 24
-            );
+            const days =
+                Math.floor(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
 
-            const minutes = Math.floor(
-                (difference / (1000 * 60)) % 60
-            );
 
-            const seconds = Math.floor(
-                (difference / 1000) % 60
-            );
+            const hours =
+                Math.floor(
+                    (difference /
+                    (1000 * 60 * 60)) % 24
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (difference /
+                    (1000 * 60)) % 60
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (difference / 1000) % 60
+                );
 
 
             document.getElementById("days").innerText =
@@ -737,6 +655,7 @@
                 String(seconds).padStart(2, "0");
 
         }
+
 
         updateCountdown();
 
