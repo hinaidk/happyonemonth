@@ -7,15 +7,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
+
     html {
         scroll-behavior: smooth;
     }
+
     body {
         background:
             radial-gradient(circle at top left, #fff0f6 0%, transparent 35%),
@@ -25,6 +28,7 @@
         font-family: "Quicksand", sans-serif;
         overflow-x: hidden;
     }
+
     body::before,
     body::after {
         content: "♡";
@@ -35,19 +39,23 @@
         z-index: -1;
         pointer-events: none;
     }
+
     body::before {
         top: 5%;
         left: -50px;
         transform: rotate(-15deg);
     }
+
     body::after {
         bottom: 5%;
         right: -50px;
         transform: rotate(15deg);
     }
+
     /* =========================
        APRESENTAÇÃO
     ========================= */
+
     .hero {
         min-height: 100vh;
         display: flex;
@@ -57,12 +65,14 @@
         text-align: center;
         padding: 40px 25px;
     }
+
     .small-text {
         font-size: 14px;
         letter-spacing: 2px;
         color: #b47b93;
         margin-bottom: 15px;
     }
+
     .hero h1 {
         font-family: "Cormorant Garamond", serif;
         font-size: clamp(55px, 14vw, 90px);
@@ -71,6 +81,7 @@
         color: #9b5f79;
         margin-bottom: 25px;
     }
+
     .subtitle {
         max-width: 500px;
         font-size: 16px;
@@ -78,6 +89,7 @@
         color: #8d6576;
         margin-bottom: 28px;
     }
+
     .spotify {
         display: inline-block;
         text-decoration: none;
@@ -88,18 +100,22 @@
         border-radius: 30px;
         transition: 0.25s;
     }
+
     .spotify:hover {
         transform: translateY(-2px);
         background: #ffffff;
     }
+
     /* =========================
        CARTA
     ========================= */
+
     .letter {
         max-width: 720px;
         margin: 0 auto;
         padding: 100px 25px;
     }
+
     .letter h2 {
         text-align: center;
         font-family: "Cormorant Garamond", serif;
@@ -108,6 +124,7 @@
         color: #9b5f79;
         margin-bottom: 40px;
     }
+
     .letter p {
         font-family: "Cormorant Garamond", serif;
         font-size: 21px;
@@ -115,14 +132,17 @@
         color: #70485b;
         margin-bottom: 22px;
     }
+
     /* =========================
        FOTOS
     ========================= */
+
     .photos {
         max-width: 900px;
         margin: 0 auto;
         padding: 80px 20px;
     }
+
     .photos h2 {
         text-align: center;
         font-family: "Cormorant Garamond", serif;
@@ -131,12 +151,14 @@
         color: #9b5f79;
         margin-bottom: 40px;
     }
+
     .photo-grid {
         display: grid;
         grid-template-columns:
             repeat(auto-fit, minmax(230px, 1fr));
         gap: 25px;
     }
+
     .photo {
         background: #ffffff;
         padding: 12px 12px 20px;
@@ -145,17 +167,21 @@
             0 10px 30px rgba(112,72,91,0.10);
         transform: rotate(-1deg);
     }
+
     .photo:nth-child(2) {
         transform: rotate(1deg);
     }
+
     .photo:nth-child(3) {
         transform: rotate(-0.5deg);
     }
+
     .photo img {
         width: 100%;
         display: block;
         border-radius: 4px;
     }
+
     .photo p {
         text-align: center;
         font-family: "Cormorant Garamond", serif;
@@ -163,6 +189,7 @@
         color: #8f5c72;
         margin-top: 13px;
     }
+
     .photo-placeholder {
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -174,9 +201,11 @@
         font-size: 55px;
         color: #d783a3;
     }
+
     /* =========================
        CONTADOR
     ========================= */
+
     .countdown-section {
         min-height: 100vh;
         display: flex;
@@ -186,6 +215,7 @@
         text-align: center;
         padding: 80px 20px;
     }
+
     .countdown-section h2 {
         font-family: "Cormorant Garamond", serif;
         font-size: 48px;
@@ -193,17 +223,20 @@
         color: #9b5f79;
         margin-bottom: 12px;
     }
+
     .countdown-section > p {
         font-size: 15px;
         color: #a47789;
         margin-bottom: 40px;
     }
+
     .countdown {
         display: flex;
         justify-content: center;
         gap: 12px;
         flex-wrap: wrap;
     }
+
     .time-box {
         min-width: 78px;
         padding: 18px 10px;
@@ -213,12 +246,14 @@
         box-shadow:
             0 8px 25px rgba(185,112,143,0.08);
     }
+
     .time-number {
         display: block;
         font-family: "Cormorant Garamond", serif;
         font-size: 34px;
         color: #9b5f79;
     }
+
     .time-label {
         display: block;
         font-size: 9px;
@@ -226,9 +261,11 @@
         color: #b47b93;
         margin-top: 3px;
     }
+
     /* =========================
        FINALIZAÇÃO
     ========================= */
+
     .ending {
         min-height: 80vh;
         display: flex;
@@ -238,6 +275,7 @@
         text-align: center;
         padding: 80px 25px;
     }
+
     .ending h2 {
         font-family: "Cormorant Garamond", serif;
         font-size: 52px;
@@ -246,57 +284,73 @@
         color: #9b5f79;
         margin-bottom: 25px;
     }
+
     .ending p {
         max-width: 600px;
         font-size: 16px;
         line-height: 1.8;
         color: #806071;
     }
+
     .heart {
         font-size: 65px;
         color: #d783a3;
         margin-top: 35px;
     }
+
     /* =========================
        CELULAR
     ========================= */
+
     @media (max-width: 600px) {
+
         .hero h1 {
             font-size: 64px;
         }
+
         .letter h2,
         .photos h2,
         .countdown-section h2 {
             font-size: 40px;
         }
+
         .letter p {
             font-size: 19px;
         }
+
         .ending h2 {
             font-size: 43px;
         }
+
         .time-box {
             min-width: 68px;
         }
     }
 </style>
 </head>
+
 <body>
+
 <!-- =========================
      1. APRESENTAÇÃO
 ========================= -->
+
 <section class="hero">
+
     <div class="small-text">
         para o meu gatinho ♡
     </div>
+
     <h1>
         um mês<br>
         de nós
     </h1>
+
     <p class="subtitle">
         um pequeno cantinho feito especialmente
         para guardar um pouquinho do nosso amor.
     </p>
+
     <a
         class="spotify"
         href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
@@ -305,17 +359,23 @@
     >
         ouvir no Spotify ♫
     </a>
+
 </section>
+
 <!-- =========================
      2. CARTA
 ========================= -->
+
 <section class="letter">
+
     <h2>
         uma cartinha pra você ♡
     </h2>
+
     <p>
         oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
     </p>
+
     <p>
         saiba que eu sou eternamente grata por ter você na minha vida.
         você me enche de vontade de viver, de aproveitar cada momento ao seu lado
@@ -324,6 +384,7 @@
         eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
         porque são elas que tornam tudo ainda mais especial.
     </p>
+
     <p>
         eu tenho certeza de que você é o amor da minha vida, porque eu nunca
         conheci alguém que me entendesse como você me entende. você me agrada,
@@ -331,6 +392,7 @@
         além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo
         suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
     </p>
+
     <p>
         esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter
         você comigo e o quanto quero continuar construindo muitas memórias ao
@@ -340,178 +402,249 @@
         finalmente passar um tempinho ao seu lado, eu já fico toda bobinha.
         mal posso esperar por esse dia!!
     </p>
+
     <p>
         espero que esse seja só o começo de uma história muito, muito longa,
         cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo,
         meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês
         de muitos outros, MUITOS OUTROS!
     </p>
+
     <p>
         feliz 1 mês pra nós!! 🩷
     </p>
+
 </section>
+
 <!-- =========================
      3. FOTOS
 ========================= -->
+
 <section class="photos">
+
     <h2>
         nossos momentinhos ♡
     </h2>
+
     <div class="photo-grid">
+
         <div class="photo">
+
             <img
                 src="content.png"
                 alt="nosso momentinho"
             >
+
             <p>
-                vai ser nós alguma hora! 
+                um dia vai ser a gente!!
             </p>
+
         </div>
+
         <div class="photo">
+
             <img
                 src="image.png"
                 alt="nosso momentinho"
             >
+
             <p>
-                ♡
+                até nos joguinhos a gente fica juntinho ♡
             </p>
+
         </div>
+
         <div class="photo">
+
             <div class="photo-placeholder">
                 ♡
             </div>
+
             <p>
-               e pedi uma ajudinha pra nossa amiga ^^
+                uma ajudinha da nossa amiga
             </p>
+
         </div>
+
     </div>
+
 </section>
+
 <!-- =========================
      4. TEMPO ATÉ SE VEREM
 ========================= -->
+
 <section class="countdown-section">
+
     <h2>
         até o nosso encontro ♡
     </h2>
+
     <p>
         contando os dias até a gente finalmente se ver.
     </p>
+
     <div class="countdown">
+
         <div class="time-box">
+
             <span
                 class="time-number"
                 id="days"
             >
                 00
             </span>
+
             <span class="time-label">
                 DIAS
             </span>
+
         </div>
+
         <div class="time-box">
+
             <span
                 class="time-number"
                 id="hours"
             >
                 00
             </span>
+
             <span class="time-label">
                 HORAS
             </span>
+
         </div>
+
         <div class="time-box">
+
             <span
                 class="time-number"
                 id="minutes"
             >
                 00
             </span>
+
             <span class="time-label">
                 MINUTOS
             </span>
+
         </div>
+
         <div class="time-box">
+
             <span
                 class="time-number"
                 id="seconds"
             >
                 00
             </span>
+
             <span class="time-label">
                 SEGUNDOS
             </span>
+
         </div>
+
     </div>
+
 </section>
+
 <!-- =========================
      5. FINALIZAÇÃO
 ========================= -->
+
 <section class="ending">
+
     <h2>
         feliz 1 mês,<br>
         meu amor ♡
     </h2>
+
     <p>
         que esse seja só o primeiro de muitos meses,
         muitas memórias e muitos momentos nossos.
-        e que novembro chegue logo, porque eu mal posso
+        e que outubro chegue logo, porque eu mal posso
         esperar pra finalmente te ver. 🩷
     </p>
+
     <div class="heart">
         ♡
     </div>
+
 </section>
+
 <!-- =========================
      CONTADOR
 ========================= -->
+
 <script>
+
     const targetDate =
         new Date("2026-10-28T00:00:00").getTime();
+
     function updateCountdown() {
+
         const now =
             new Date().getTime();
+
         const difference =
             targetDate - now;
+
         if (difference <= 0) {
+
             document.getElementById("days").textContent = "00";
             document.getElementById("hours").textContent = "00";
             document.getElementById("minutes").textContent = "00";
             document.getElementById("seconds").textContent = "00";
+
             return;
         }
+
         const days =
             Math.floor(
                 difference /
                 (1000 * 60 * 60 * 24)
             );
+
         const hours =
             Math.floor(
                 (difference /
                 (1000 * 60 * 60)) % 24
             );
+
         const minutes =
             Math.floor(
                 (difference /
                 (1000 * 60)) % 60
             );
+
         const seconds =
             Math.floor(
                 (difference / 1000) % 60
             );
+
         document.getElementById("days").textContent =
             String(days).padStart(2, "0");
+
         document.getElementById("hours").textContent =
             String(hours).padStart(2, "0");
+
         document.getElementById("minutes").textContent =
             String(minutes).padStart(2, "0");
+
         document.getElementById("seconds").textContent =
             String(seconds).padStart(2, "0");
     }
+
     updateCountdown();
+
     setInterval(
         updateCountdown,
         1000
     );
+
 </script>
+
 </body>
 </html>
