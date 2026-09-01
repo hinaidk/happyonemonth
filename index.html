@@ -3,757 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>um mês de nós ♡</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background:
-                radial-gradient(circle at top left, #fff0f6 0%, transparent 35%),
-                radial-gradient(circle at bottom right, #ffe3ef 0%, transparent 35%),
-                #fff8fb;
-
-            color: #70485b;
-            font-family: "Quicksand", sans-serif;
-            overflow-x: hidden;
-        }
-
-        body::before,
-        body::after {
-            content: "♡";
-            position: fixed;
-            font-family: serif;
-            font-size: 150px;
-            color: rgba(238, 158, 190, 0.08);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        body::before {
-            top: 5%;
-            left: -50px;
-            transform: rotate(-15deg);
-        }
-
-        body::after {
-            bottom: 5%;
-            right: -50px;
-            transform: rotate(15deg);
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .small-text {
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: #b47b93;
-            margin-bottom: 12px;
-        }
-
-        h1 {
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(52px, 12vw, 100px);
-            font-weight: 500;
-            color: #9d5575;
-            line-height: 0.95;
-            margin-bottom: 18px;
-        }
-
-        .subtitle {
-            font-size: 17px;
-            max-width: 500px;
-            line-height: 1.7;
-            color: #8b6273;
-        }
-
-        /* ESTRELINHA */
-
-        .star-link {
-            margin-top: 45px;
-
-            width: 78px;
-            height: 78px;
-
-            border-radius: 50%;
-            border: 1px solid #efb2ca;
-
-            background: rgba(255, 240, 247, 0.9);
-
-            box-shadow:
-                0 10px 30px rgba(191, 105, 143, 0.15),
-                inset 0 0 20px rgba(255, 255, 255, 0.8);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: #d77c9f;
-            font-size: 35px;
-
-            text-decoration: none;
-
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
-        }
-
-        .star-link:hover {
-            transform: scale(1.08) rotate(8deg);
-            box-shadow:
-                0 15px 35px rgba(191, 105, 143, 0.22),
-                inset 0 0 20px rgba(255, 255, 255, 0.8);
-        }
-
-        .star-link:active {
-            transform: scale(0.95);
-        }
-
-        .click-text {
-            margin-top: 12px;
-            font-size: 13px;
-            color: #b48698;
-        }
-
-        /* CONTADOR */
-
-        #contador {
-            scroll-margin-top: 20px;
-        }
-
-        .countdown-section {
-            width: 100%;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 30px 25px 90px;
-            text-align: center;
-        }
-
-        .countdown-title {
-            font-family: "Cormorant Garamond", serif;
-            font-size: 34px;
-            color: #a65d7d;
-            margin-bottom: 22px;
-        }
-
+<title>um mês de nós ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background:
+            radial-gradient(circle at top left, #fff0f6 0%, transparent 35%),
+            radial-gradient(circle at bottom right, #ffe3ef 0%, transparent 35%),
+            #fff8fb;
+        color: #70485b;
+        font-family: "Quicksand", sans-serif;
+        overflow-x: hidden;
+    }
+    body::before,
+    body::after {
+        content: "♡";
+        position: fixed;
+        font-family: serif;
+        font-size: 150px;
+        color: rgba(238, 158, 190, 0.08);
+        z-index: -1;
+        pointer-events: none;
+    }
+    body::before {
+        top: 5%;
+        left: -50px;
+        transform: rotate(-15deg);
+    }
+    body::after {
+        bottom: 5%;
+        right: -50px;
+        transform: rotate(15deg);
+    }
+    /* HERO */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .small-text {
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #b47b93;
+        margin-bottom: 12px;
+    }
+    h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(48px, 12vw, 80px);
+        font-weight: 500;
+        color: #9b5f79;
+        line-height: 1;
+        margin-bottom: 18px;
+    }
+    .subtitle {
+        font-size: 16px;
+        color: #8d6576;
+        max-width: 500px;
+        line-height: 1.8;
+        margin-bottom: 28px;
+    }
+    .spotify {
+        display: inline-block;
+        text-decoration: none;
+        color: #a85f7c;
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid #f1cad9;
+        padding: 11px 20px;
+        border-radius: 30px;
+        transition: 0.25s;
+        margin-bottom: 35px;
+    }
+    .spotify:hover {
+        transform: translateY(-2px);
+        background: #fff;
+    }
+    /* ESTRELINHA */
+    .star-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        text-decoration: none;
+        color: #d783a3;
+        font-size: 45px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid #f2cada;
+        border-radius: 50%;
+        box-shadow: 0 8px 25px rgba(185, 112, 143, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+        pointer-events: auto;
+    }
+    .star-link:hover {
+        transform: rotate(10deg) scale(1.08);
+        box-shadow: 0 10px 30px rgba(185, 112, 143, 0.2);
+    }
+    .star-text {
+        font-size: 12px;
+        color: #b47b93;
+        margin-top: 10px;
+    }
+    /* CONTADOR */
+    #contador {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 70px 20px;
+    }
+    .count-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        color: #9b5f79;
+        margin-bottom: 10px;
+    }
+    .count-subtitle {
+        color: #a47789;
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .time-box {
+        min-width: 75px;
+        padding: 16px 10px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid #f1cad9;
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(185, 112, 143, 0.08);
+    }
+    .time-number {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 32px;
+        color: #9b5f79;
+    }
+    .time-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: #b47b93;
+    }
+    /* CARTA */
+    .letter {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 80px 25px;
+        text-align: center;
+    }
+    .letter h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        color: #9b5f79;
+        margin-bottom: 30px;
+    }
+    .letter p {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 21px;
+        line-height: 1.8;
+        color: #70485b;
+        margin-bottom: 18px;
+    }
+    /* FOTOS */
+    .photos {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .photos h2 {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        color: #9b5f79;
+        margin-bottom: 35px;
+    }
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 25px;
+    }
+    .photo {
+        background: white;
+        padding: 12px 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(112, 72, 91, 0.1);
+        transform: rotate(-1deg);
+    }
+    .photo:nth-child(2) {
+        transform: rotate(1deg);
+    }
+    .photo img {
+        width: 100%;
+        display: block;
+        border-radius: 4px;
+    }
+    .photo p {
+        text-align: center;
+        margin-top: 12px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: #8f5c72;
+    }
+    /* FINAL */
+    .ending {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 70px 25px;
+    }
+    .ending h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 48px;
+        color: #9b5f79;
+        margin-bottom: 25px;
+    }
+    .ending p {
+        max-width: 600px;
+        line-height: 1.8;
+        color: #806071;
+    }
+    .heart {
+        font-size: 60px;
+        color: #d783a3;
+        margin-top: 30px;
+    }
+    @media (max-width: 600px) {
         .countdown {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            max-width: 500px;
-            margin: 0 auto;
+            gap: 8px;
         }
-
         .time-box {
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid #f2cada;
-            border-radius: 18px;
-            padding: 17px 10px;
-
-            box-shadow:
-                0 8px 25px rgba(180, 104, 137, 0.08);
+            min-width: 68px;
         }
-
-        .number {
-            display: block;
-
-            font-family: "Cormorant Garamond", serif;
-            font-size: 34px;
-            font-weight: 600;
-
-            color: #a85f7d;
-        }
-
-        .label {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #b78a9b;
-        }
-
-        /* SEÇÕES */
-
-        section {
-            width: 100%;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 90px 25px;
-        }
-
-        .section-title {
-            font-family: "Cormorant Garamond", serif;
-            font-size: 48px;
-            font-weight: 500;
-            text-align: center;
-            color: #9d5575;
-            margin-bottom: 35px;
-        }
-
-        /* CARTA */
-
-        .letter {
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid #f1cedc;
-            border-radius: 28px;
-
-            padding: 45px;
-
-            box-shadow:
-                0 15px 45px rgba(163, 93, 121, 0.08);
-
-            line-height: 1.9;
-            font-size: 16px;
-        }
-
         .letter p {
-            margin-bottom: 18px;
+            font-size: 19px;
         }
-
-        .letter p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* FOTOS */
-
-        .photos {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .photo {
-            background: white;
-            padding: 12px;
-            border-radius: 20px;
-
-            box-shadow:
-                0 12px 35px rgba(163, 93, 121, 0.12);
-
-            transform: rotate(-1deg);
-        }
-
-        .photo:nth-child(2) {
-            transform: rotate(1.5deg);
-        }
-
-        .photo:nth-child(3) {
-            transform: rotate(-0.5deg);
-        }
-
-        .photo img {
-            width: 100%;
-            height: 360px;
-
-            object-fit: cover;
-
-            border-radius: 14px;
-            display: block;
-        }
-
-        .caption {
-            text-align: center;
-
-            font-family: "Cormorant Garamond", serif;
-            font-size: 22px;
-
-            color: #a25c79;
-
-            padding: 14px 5px 7px;
-        }
-
-        /* MÚSICA */
-
-        .music-card {
-            background: rgba(255, 255, 255, 0.72);
-            border: 1px solid #f1cedc;
-            border-radius: 25px;
-
-            padding: 35px;
-
-            text-align: center;
-
-            box-shadow:
-                0 15px 40px rgba(163, 93, 121, 0.08);
-        }
-
-        .music-card h3 {
-            font-family: "Cormorant Garamond", serif;
-            font-size: 32px;
-            color: #9d5575;
-            margin-bottom: 10px;
-        }
-
-        .music-card p {
-            margin-bottom: 22px;
-            color: #8c6877;
-        }
-
-        .spotify {
-            display: inline-block;
-
-            text-decoration: none;
-
-            color: white;
-            background: #d987a7;
-
-            padding: 13px 25px;
-
-            border-radius: 30px;
-
-            transition: 0.3s ease;
-        }
-
-        .spotify:hover {
-            transform: translateY(-2px);
-            background: #c96f94;
-        }
-
-        /* FINAL */
-
-        .ending {
-            min-height: 70vh;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-        }
-
         .ending h2 {
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: clamp(45px, 10vw, 80px);
-
-            font-weight: 500;
-
-            color: #9d5575;
-
-            margin-bottom: 20px;
+            font-size: 40px;
         }
-
-        .ending p {
-            max-width: 550px;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .heart {
-            font-size: 35px;
-            margin-top: 25px;
-            color: #d77c9f;
-
-            animation: pulse 1.8s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.15);
-            }
-        }
-
-        /* CELULAR */
-
-        @media (max-width: 650px) {
-
-            .hero {
-                min-height: 100svh;
-                padding: 30px 18px;
-            }
-
-            h1 {
-                font-size: 62px;
-            }
-
-            .subtitle {
-                font-size: 15px;
-            }
-
-            section {
-                padding: 65px 18px;
-            }
-
-            .section-title {
-                font-size: 40px;
-            }
-
-            .letter {
-                padding: 28px 23px;
-                font-size: 15px;
-                line-height: 1.8;
-            }
-
-            .photos {
-                grid-template-columns: 1fr;
-            }
-
-            .photo img {
-                height: 380px;
-            }
-
-            .countdown {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 310px;
-            }
-
-            .time-box {
-                min-width: 0;
-            }
-
-            .music-card {
-                padding: 28px 20px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
-
 <body>
-
-    <!-- TOPO -->
-
-    <main class="hero">
-
-        <div class="small-text">
-            para o meu gatinho ♡
-        </div>
-
-        <h1>
-            um mês<br>
-            de nós
-        </h1>
-
-        <p class="subtitle">
-            uma pequena surpresa para comemorar
-            o nosso primeiro mês juntinhos.
-        </p>
-
-        <!-- AGORA É UM LINK, NÃO UM BOTÃO -->
-
-        <a href="#contador" class="star-link" aria-label="abrir contador">
-            ✦
-        </a>
-
-        <p class="click-text">
-            clique na estrelinha ♡
-        </p>
-
-    </main>
-
-
-    <!-- CONTADOR -->
-
-    <div id="contador" class="countdown-section">
-
-        <div class="countdown-title">
-            até finalmente nos vermos...
-        </div>
-
-        <div class="countdown">
-
-            <div class="time-box">
-                <span class="number" id="days">00</span>
-                <span class="label">dias</span>
-            </div>
-
-            <div class="time-box">
-                <span class="number" id="hours">00</span>
-                <span class="label">horas</span>
-            </div>
-
-            <div class="time-box">
-                <span class="number" id="minutes">00</span>
-                <span class="label">minutos</span>
-            </div>
-
-            <div class="time-box">
-                <span class="number" id="seconds">00</span>
-                <span class="label">segundos</span>
-            </div>
-
-        </div>
-
+<!-- HERO -->
+<section class="hero">
+    <div class="small-text">
+        para o meu gatinho ♡
     </div>
-
-
-    <!-- CARTA -->
-
-    <section>
-
-        <h2 class="section-title">
-            uma cartinha pra você ♡
-        </h2>
-
-        <div class="letter">
-
-            <p>
-                oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
-            </p>
-
-            <p>
-                saiba que eu sou eternamente grata por ter você na minha vida.
-                você me enche de vontade de viver, de aproveitar cada momento ao seu lado
-                e, principalmente, de te fazer feliz. muito obrigada por ser essa pessoa
-                incrível que sempre tenta fazer dar certo e que se esforça por nós.
-                eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
-                porque são elas que tornam tudo ainda mais especial.
-            </p>
-
-            <p>
-                eu tenho certeza de que você é o amor da minha vida, porque eu nunca
-                conheci alguém que me entendesse como você me entende. você me agrada,
-                faz o que eu gosto, realiza minhas vontades e sempre tenta me ver feliz.
-                além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo
-                suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
-            </p>
-
-            <p>
-                esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter
-                você comigo e o quanto quero continuar construindo muitas memórias ao
-                seu lado. e eu tô MUITO ansiosa pra novembro chegar logo, porque finalmente
-                vamos poder nos ver e viver tudo isso juntinhos de verdade. só de pensar
-                que vou poder te encontrar, ficar pertinho de você e finalmente passar
-                um tempinho ao seu lado, eu já fico toda bobinha. mal posso esperar por esse dia!!
-            </p>
-
-            <p>
-                espero que esse seja só o começo de uma história muito, muito longa,
-                cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo,
-                meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês
-                de muitos outros, MUITOS OUTROS!
-            </p>
-
-            <p>
-                feliz 1 mês pra nós!! 🩷
-            </p>
-
+    <h1>
+        um mês<br>
+        de nós
+    </h1>
+    <p class="subtitle">
+        um pequeno cantinho feito especialmente
+        para guardar um pouquinho do nosso amor.
+    </p>
+    <a
+        class="spotify"
+        href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        ouvir no Spotify ♫
+    </a>
+    <a href="#contador" class="star-link" aria-label="ver contador">
+        ✦
+    </a>
+    <div class="star-text">
+        toca na estrelinha ♡
+    </div>
+</section>
+<!-- CONTADOR -->
+<section id="contador">
+    <h2 class="count-title">
+        contando os dias...
+    </h2>
+    <p class="count-subtitle">
+        até o nosso encontro em outubro ♡
+    </p>
+    <div class="countdown">
+        <div class="time-box">
+            <span class="time-number" id="days">00</span>
+            <span class="time-label">DIAS</span>
         </div>
-
-    </section>
-
-
-    <!-- FOTOS -->
-
-    <section>
-
-        <h2 class="section-title">
-            nossos momentinhos ♡
-        </h2>
-
-        <div class="photos">
-
-            <div class="photo">
-
-                <img src="content.png" alt="nossa foto">
-
-                <div class="caption">
-                    fofinhos :3
-                </div>
-
+        <div class="time-box">
+            <span class="time-number" id="hours">00</span>
+            <span class="time-label">HORAS</span>
+        </div>
+        <div class="time-box">
+            <span class="time-number" id="minutes">00</span>
+            <span class="time-label">MINUTOS</span>
+        </div>
+        <div class="time-box">
+            <span class="time-number" id="seconds">00</span>
+            <span class="time-label">SEGUNDOS</span>
+        </div>
+    </div>
+</section>
+<!-- CARTA -->
+<section class="letter">
+    <h2>
+        uma cartinha pra você ♡
+    </h2>
+    <p>
+        oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
+    </p>
+    <p>
+        saiba que eu sou eternamente grata por ter você na minha vida.
+        você me enche de vontade de viver, de aproveitar cada momento ao seu lado
+        e, principalmente, de te fazer feliz. muito obrigada por ser essa pessoa
+        incrível que sempre tenta fazer dar certo e que se esforça por nós.
+        eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
+        porque são elas que tornam tudo ainda mais especial.
+    </p>
+    <p>
+        eu tenho certeza de que você é o amor da minha vida, porque eu nunca
+        conheci alguém que me entendesse como você me entende. você me agrada,
+        faz o que eu gosto, realiza minhas vontades e sempre tenta me ver feliz.
+        além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo
+        suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
+    </p>
+    <p>
+        esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter
+        você comigo e o quanto quero continuar construindo muitas memórias ao
+        seu lado. e eu tô MUITO ansiosa pra novembro chegar logo, porque finalmente
+        vamos poder nos ver e viver tudo isso juntinhos de verdade.
+        só de pensar que vou poder te encontrar, ficar pertinho de você e
+        finalmente passar um tempinho ao seu lado, eu já fico toda bobinha.
+        mal posso esperar por esse dia!!
+    </p>
+    <p>
+        espero que esse seja só o começo de uma história muito, muito longa,
+        cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo,
+        meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês
+        de muitos outros, MUITOS OUTROS!
+    </p>
+    <p>
+        feliz 1 mês pra nós!! 🩷
+    </p>
+</section>
+<!-- FOTOS -->
+<section class="photos">
+    <h2>
+        nossos momentinhos ♡
+    </h2>
+    <div class="photo-grid">
+        <div class="photo">
+            <img src="content.png" alt="nosso momentinho">
+            <p>fofinhos :3</p>
+        </div>
+        <div class="photo">
+            <img src="image.png" alt="nosso momentinho">
+            <p>:p♡</p>
+        </div>
+        <div class="photo">
+            <div style="
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #fff0f6;
+                border-radius: 4px;
+                font-size: 50px;
+                color: #d783a3;
+            ">
+                ♡
             </div>
-
-
-            <div class="photo">
-
-                <img src="image.png" alt="nossa foto">
-
-                <div class="caption">
-                    :p♡
-                </div>
-
-            </div>
-
-
-            <div class="photo">
-
-                <div style="
-                    height: 360px;
-                    border-radius: 14px;
-                    background: #fff0f6;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 30px;
-                    color: #b47b93;
-                    font-family: 'Cormorant Garamond', serif;
-                    font-size: 25px;
-                ">
-                    uma fotinha nossa ♡
-                </div>
-
-                <div class="caption">
-                    mais uma memória...
-                </div>
-
-            </div>
-
+            <p>uma fotinha nossa</p>
         </div>
-
-    </section>
-
-
-    <!-- MÚSICA -->
-
-    <section>
-
-        <h2 class="section-title">
-            uma música pra nós ♡
-        </h2>
-
-        <div class="music-card">
-
-            <h3>
-                essa me lembra você
-            </h3>
-
-            <p>
-                coloquei uma musiquinha especial
-                pra acompanhar essa surpresa.
-            </p>
-
-            <a
-                class="spotify"
-                href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ouvir no Spotify ♫
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FINAL -->
-
-    <section class="ending">
-
-        <h2>
-            feliz 1 mês,<br>
-            meu amor ♡
-        </h2>
-
-        <p>
-            que esse seja só o primeiro de muitos meses,
-            muitas memórias e muitos momentos nossos.
-            e que novembro chegue logo, porque eu mal posso
-            esperar pra finalmente te ver. 🩷
-        </p>
-
-        <div class="heart">
-            ♡
-        </div>
-
-    </section>
-
-
-    <!-- CONTADOR FUNCIONANDO SEPARADAMENTE -->
-
-    <script>
-
-        const targetDate =
-            new Date("2026-10-28T00:00:00").getTime();
-
-
-        function updateCountdown() {
-
-            const now =
-                new Date().getTime();
-
-            const difference =
-                targetDate - now;
-
-
-            if (difference <= 0) {
-
-                document.getElementById("days").textContent = "00";
-                document.getElementById("hours").textContent = "00";
-                document.getElementById("minutes").textContent = "00";
-                document.getElementById("seconds").textContent = "00";
-
-                return;
-            }
-
-
-            const days =
-                Math.floor(
-                    difference /
-                    (1000 * 60 * 60 * 24)
-                );
-
-
-            const hours =
-                Math.floor(
-                    (difference /
-                    (1000 * 60 * 60)) % 24
-                );
-
-
-            const minutes =
-                Math.floor(
-                    (difference /
-                    (1000 * 60)) % 60
-                );
-
-
-            const seconds =
-                Math.floor(
-                    (difference / 1000) % 60
-                );
-
-
-            document.getElementById("days").textContent =
-                String(days).padStart(2, "0");
-
-
-            document.getElementById("hours").textContent =
-                String(hours).padStart(2, "0");
-
-
-            document.getElementById("minutes").textContent =
-                String(minutes).padStart(2, "0");
-
-
-            document.getElementById("seconds").textContent =
-                String(seconds).padStart(2, "0");
-
+    </div>
+</section>
+<!-- FINAL -->
+<section class="ending">
+    <h2>
+        feliz 1 mês,<br>
+        meu amor ♡
+    </h2>
+    <p>
+        que esse seja só o primeiro de muitos meses,
+        muitas memórias e muitos momentos nossos.
+        e que novembro chegue logo, porque eu mal posso
+        esperar pra finalmente te ver. 🩷
+    </p>
+    <div class="heart">
+        ♡
+    </div>
+</section>
+<!-- CONTADOR -->
+<script>
+    const targetDate =
+        new Date("2026-10-28T00:00:00").getTime();
+    function updateCountdown() {
+        const now =
+            new Date().getTime();
+        const difference =
+            targetDate - now;
+        if (difference <= 0) {
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+            return;
         }
-
-
-        updateCountdown();
-
-        setInterval(updateCountdown, 1000);
-
-    </script>
-
+        const days =
+            Math.floor(
+                difference /
+                (1000 * 60 * 60 * 24)
+            );
+        const hours =
+            Math.floor(
+                (difference /
+                (1000 * 60 * 60)) % 24
+            );
+        const minutes =
+            Math.floor(
+                (difference /
+                (1000 * 60)) % 60
+            );
+        const seconds =
+            Math.floor(
+                (difference / 1000) % 60
+            );
+        document.getElementById("days").textContent =
+            String(days).padStart(2, "0");
+        document.getElementById("hours").textContent =
+            String(hours).padStart(2, "0");
+        document.getElementById("minutes").textContent =
+            String(minutes).padStart(2, "0");
+        document.getElementById("seconds").textContent =
+            String(seconds).padStart(2, "0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
