@@ -146,6 +146,73 @@
             transform: scale(1.1) rotate(8deg);
         }
 
+        .star-button:active {
+            transform: scale(0.95);
+        }
+
+        /* CONTADOR LOGO DEPOIS DA ESTRELINHA */
+
+        .countdown-section {
+            display: none;
+            width: 90%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px 0 80px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-section.show {
+            display: block;
+            animation: appear 0.8s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .countdown-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            margin-bottom: 25px;
+            color: #805968;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .time-box {
+            background: rgba(255, 250, 248, 0.9);
+            border: 1px solid #efd8df;
+            border-radius: 20px;
+            padding: 20px 10px;
+            box-shadow: 0 10px 30px rgba(120, 70, 90, 0.05);
+        }
+
+        .time-box span {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: #714c59;
+        }
+
+        .time-box small {
+            color: #a27683;
+            font-size: 11px;
+        }
+
         section {
             padding: 80px 0;
         }
@@ -256,50 +323,11 @@
             background: #cf95a8;
         }
 
-        .countdown-section {
-            display: none;
-            text-align: center;
-        }
-
-        .countdown-section.show {
-            display: block;
-        }
-
-        .countdown-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 23px;
-            margin-bottom: 25px;
-            color: #805968;
-        }
-
-        .countdown {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-
-        .time-box {
-            background: rgba(255, 250, 248, 0.9);
-            border: 1px solid #efd8df;
-            border-radius: 20px;
-            padding: 20px 10px;
-        }
-
-        .time-box span {
-            display: block;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 36px;
-            color: #714c59;
-        }
-
-        .time-box small {
-            color: #a27683;
-            font-size: 11px;
-        }
-
         .ending {
             text-align: center;
             padding: 100px 20px;
+            position: relative;
+            z-index: 1;
         }
 
         .big-heart {
@@ -351,6 +379,10 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .countdown-section {
+                padding-top: 10px;
+            }
+
         }
 
     </style>
@@ -384,7 +416,11 @@
             uma pequena surpresa para o meu Rael...
         </p>
 
-        <button class="star-button" onclick="showCountdown()">
+        <button
+            class="star-button"
+            onclick="showCountdown()"
+            aria-label="mostrar contador"
+        >
             ✦
         </button>
 
@@ -393,6 +429,48 @@
         </p>
 
     </div>
+
+
+    <!-- CONTADOR -->
+
+    <section
+        id="countdownSection"
+        class="countdown-section"
+    >
+
+        <h2 class="section-title">
+            até o nosso encontro ♡
+        </h2>
+
+        <p class="countdown-text">
+            cada dia que passa é um dia a menos para finalmente te ver.
+        </p>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>dias</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>horas</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>minutos</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>segundos</small>
+            </div>
+
+        </div>
+
+    </section>
 
 
     <main class="container">
@@ -448,21 +526,43 @@
             <div class="photos">
 
                 <div class="photo">
-                    <img src="content.png" alt="você é minha vida">
-                    <p>fofinhos :3</p>
+
+                    <img
+                        src="content.png"
+                        alt="fofinhos"
+                    >
+
+                    <p>
+                        fofinhos :3
+                    </p>
+
                 </div>
 
+
                 <div class="photo">
-                    <img src="image.png" alt="eu te amo">
-                    <p>:p♡</p>
+
+                    <img
+                        src="image.png"
+                        alt="eu te amo"
+                    >
+
+                    <p>
+                        :p♡
+                    </p>
+
                 </div>
+
 
                 <div class="photo">
 
                     <div class="photo-placeholder">
+
                         📷
+
                         <br><br>
+
                         uma fotinha nossa
+
                     </div>
 
                 </div>
@@ -494,6 +594,7 @@
                     class="spotify-button"
                     href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     ouvir nossa música ♡
                 </a>
@@ -501,49 +602,6 @@
             </div>
 
         </section>
-
-
-        <!-- CONTADOR -->
-
-        <section
-            id="countdownSection"
-            class="countdown-section"
-        >
-
-            <h2 class="section-title">
-                até o nosso encontro ♡
-            </h2>
-
-            <p class="countdown-text">
-                cada dia que passa é um dia a menos para finalmente te ver.
-            </p>
-
-            <div class="countdown">
-
-                <div class="time-box">
-                    <span id="days">00</span>
-                    <small>dias</small>
-                </div>
-
-                <div class="time-box">
-                    <span id="hours">00</span>
-                    <small>horas</small>
-                </div>
-
-                <div class="time-box">
-                    <span id="minutes">00</span>
-                    <small>minutos</small>
-                </div>
-
-                <div class="time-box">
-                    <span id="seconds">00</span>
-                    <small>segundos</small>
-                </div>
-
-            </div>
-
-        </section>
-
 
     </main>
 
@@ -580,14 +638,6 @@
 
             section.classList.add("show");
 
-            setTimeout(() => {
-
-                section.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }, 100);
-
         }
 
 
@@ -612,6 +662,7 @@
                 document.getElementById("seconds").innerText = "00";
 
                 return;
+
             }
 
 
@@ -645,11 +696,14 @@
             document.getElementById("days").innerText =
                 String(days).padStart(2, "0");
 
+
             document.getElementById("hours").innerText =
                 String(hours).padStart(2, "0");
 
+
             document.getElementById("minutes").innerText =
                 String(minutes).padStart(2, "0");
+
 
             document.getElementById("seconds").innerText =
                 String(seconds).padStart(2, "0");
