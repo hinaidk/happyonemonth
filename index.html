@@ -313,24 +313,40 @@
         /* fotos */
 
         .photos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
 
-        .photo {
-            aspect-ratio: 1 / 1;
-            border-radius: 25px;
-            background: linear-gradient(145deg, #f6e4e9, #fff8f6);
-            border: 1px dashed #d6a5b4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 15px;
-            color: #b17c8c;
-            font-size: 13px;
-        }
+.photo {
+    aspect-ratio: 1 / 1;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #f6e4e9, #fff8f6);
+    border: 1px dashed #d6a5b4;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(255, 250, 248, 0.85);
+    color: #714c59;
+    font-size: 13px;
+    text-align: center;
+}
 
         /* final */
 
@@ -604,28 +620,28 @@
     <h2 class="título-seção">
         nossos momentos 📷
     </h2>
+<div class="photos">
 
-    <div class="fotos">
-
-        <div class="foto">
-            <img src="conteúdo.png" alt="nossa primeira fotinha">
-            <p>fofinhos :3</p>
-        </div>
-
-        <div class="foto">
-            <img src="imagem.png" alt="uma fotinha sua">
-            <p>:p♡</p>
-        </div>
-
-        <div class="foto">
-            📷
-            <br><br>
-            uma fotinha nossa
-        </div>
-
+    <div class="photo">
+        <img src="conteúdo.png" alt="fofinhos">
+        <p>fofinhos :3</p>
     </div>
 
+    <div class="photo">
+        <img src="imagem.png" alt="eu te amo">
+        <p>:p♡</p>
+    </div>
+
+    <div class="photo">
+        📷
+        <br><br>
+        uma fotinha nossa
+    </div>
+
+</div>
+
 </section>
+    
 
 
     <!-- FINAL -->
