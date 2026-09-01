@@ -56,7 +56,7 @@
             transform: rotate(15deg);
         }
 
-        /* -------------------- HERO -------------------- */
+        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -91,21 +91,19 @@
             color: #8b6273;
         }
 
-        /* -------------------- ESTRELINHA -------------------- */
+        /* ESTRELINHA */
 
-        .surprise {
+        .star-link {
             margin-top: 45px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        .star-button {
             width: 78px;
             height: 78px;
+
             border-radius: 50%;
             border: 1px solid #efb2ca;
+
             background: rgba(255, 240, 247, 0.9);
+
             box-shadow:
                 0 10px 30px rgba(191, 105, 143, 0.15),
                 inset 0 0 20px rgba(255, 255, 255, 0.8);
@@ -117,23 +115,20 @@
             color: #d77c9f;
             font-size: 35px;
 
-            cursor: pointer;
-            transition: 0.3s ease;
-            list-style: none;
+            text-decoration: none;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
         }
 
-        .star-button::-webkit-details-marker {
-            display: none;
-        }
-
-        .star-button:hover {
+        .star-link:hover {
             transform: scale(1.08) rotate(8deg);
             box-shadow:
                 0 15px 35px rgba(191, 105, 143, 0.22),
                 inset 0 0 20px rgba(255, 255, 255, 0.8);
         }
 
-        .star-button:active {
+        .star-link:active {
             transform: scale(0.95);
         }
 
@@ -143,55 +138,53 @@
             color: #b48698;
         }
 
-        /* -------------------- CONTADOR -------------------- */
+        /* CONTADOR */
 
-        .countdown-content {
-            margin-top: 28px;
-            animation: aparecer 0.7s ease;
+        #contador {
+            scroll-margin-top: 20px;
         }
 
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(-12px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .countdown-section {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 30px 25px 90px;
+            text-align: center;
         }
 
         .countdown-title {
             font-family: "Cormorant Garamond", serif;
-            font-size: 30px;
+            font-size: 34px;
             color: #a65d7d;
-            margin-bottom: 18px;
+            margin-bottom: 22px;
         }
 
         .countdown {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            max-width: 480px;
+            gap: 12px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
         .time-box {
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255, 255, 255, 0.7);
             border: 1px solid #f2cada;
-            border-radius: 16px;
-            padding: 15px 10px;
-            min-width: 75px;
-            box-shadow: 0 8px 25px rgba(180, 104, 137, 0.08);
+            border-radius: 18px;
+            padding: 17px 10px;
+
+            box-shadow:
+                0 8px 25px rgba(180, 104, 137, 0.08);
         }
 
         .number {
             display: block;
+
             font-family: "Cormorant Garamond", serif;
-            font-size: 32px;
-            color: #a85f7d;
+            font-size: 34px;
             font-weight: 600;
+
+            color: #a85f7d;
         }
 
         .label {
@@ -201,7 +194,7 @@
             color: #b78a9b;
         }
 
-        /* -------------------- SEÇÕES -------------------- */
+        /* SEÇÕES */
 
         section {
             width: 100%;
@@ -219,14 +212,18 @@
             margin-bottom: 35px;
         }
 
-        /* -------------------- CARTA -------------------- */
+        /* CARTA */
 
         .letter {
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid #f1cedc;
             border-radius: 28px;
+
             padding: 45px;
-            box-shadow: 0 15px 45px rgba(163, 93, 121, 0.08);
+
+            box-shadow:
+                0 15px 45px rgba(163, 93, 121, 0.08);
+
             line-height: 1.9;
             font-size: 16px;
         }
@@ -239,7 +236,7 @@
             margin-bottom: 0;
         }
 
-        /* -------------------- FOTOS -------------------- */
+        /* FOTOS */
 
         .photos {
             display: grid;
@@ -248,10 +245,13 @@
         }
 
         .photo {
-            background: #fff;
+            background: white;
             padding: 12px;
             border-radius: 20px;
-            box-shadow: 0 12px 35px rgba(163, 93, 121, 0.12);
+
+            box-shadow:
+                0 12px 35px rgba(163, 93, 121, 0.12);
+
             transform: rotate(-1deg);
         }
 
@@ -266,28 +266,37 @@
         .photo img {
             width: 100%;
             height: 360px;
+
             object-fit: cover;
+
             border-radius: 14px;
             display: block;
         }
 
         .caption {
             text-align: center;
+
             font-family: "Cormorant Garamond", serif;
             font-size: 22px;
+
             color: #a25c79;
+
             padding: 14px 5px 7px;
         }
 
-        /* -------------------- MÚSICA -------------------- */
+        /* MÚSICA */
 
         .music-card {
             background: rgba(255, 255, 255, 0.72);
             border: 1px solid #f1cedc;
             border-radius: 25px;
+
             padding: 35px;
+
             text-align: center;
-            box-shadow: 0 15px 40px rgba(163, 93, 121, 0.08);
+
+            box-shadow:
+                0 15px 40px rgba(163, 93, 121, 0.08);
         }
 
         .music-card h3 {
@@ -304,11 +313,16 @@
 
         .spotify {
             display: inline-block;
+
             text-decoration: none;
+
             color: white;
             background: #d987a7;
+
             padding: 13px 25px;
+
             border-radius: 30px;
+
             transition: 0.3s ease;
         }
 
@@ -317,22 +331,28 @@
             background: #c96f94;
         }
 
-        /* -------------------- FINAL -------------------- */
+        /* FINAL */
 
         .ending {
             min-height: 70vh;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             text-align: center;
         }
 
         .ending h2 {
             font-family: "Cormorant Garamond", serif;
+
             font-size: clamp(45px, 10vw, 80px);
+
             font-weight: 500;
+
             color: #9d5575;
+
             margin-bottom: 20px;
         }
 
@@ -346,6 +366,7 @@
             font-size: 35px;
             margin-top: 25px;
             color: #d77c9f;
+
             animation: pulse 1.8s infinite;
         }
 
@@ -359,7 +380,7 @@
             }
         }
 
-        /* -------------------- MOBILE -------------------- */
+        /* CELULAR */
 
         @media (max-width: 650px) {
 
@@ -400,7 +421,7 @@
 
             .countdown {
                 grid-template-columns: repeat(2, 1fr);
-                max-width: 300px;
+                max-width: 310px;
             }
 
             .time-box {
@@ -416,7 +437,8 @@
 
 <body>
 
-    <!-- HERO -->
+    <!-- TOPO -->
+
     <main class="hero">
 
         <div class="small-text">
@@ -429,58 +451,60 @@
         </h1>
 
         <p class="subtitle">
-            uma pequena surpresa para comemorar o nosso primeiro mês juntinhos.
+            uma pequena surpresa para comemorar
+            o nosso primeiro mês juntinhos.
         </p>
 
-        <!-- A ESTRELINHA ABRE O CONTADOR SEM JAVASCRIPT -->
-        <details class="surprise">
+        <!-- AGORA É UM LINK, NÃO UM BOTÃO -->
 
-            <summary class="star-button">
-                ✦
-            </summary>
+        <a href="#contador" class="star-link" aria-label="abrir contador">
+            ✦
+        </a>
 
-            <p class="click-text">
-                nossa contagem regressiva ♡
-            </p>
-
-            <div class="countdown-content">
-
-                <div class="countdown-title">
-                    até finalmente nos vermos...
-                </div>
-
-                <div class="countdown">
-
-                    <div class="time-box">
-                        <span class="number" id="days">00</span>
-                        <span class="label">dias</span>
-                    </div>
-
-                    <div class="time-box">
-                        <span class="number" id="hours">00</span>
-                        <span class="label">horas</span>
-                    </div>
-
-                    <div class="time-box">
-                        <span class="number" id="minutes">00</span>
-                        <span class="label">minutos</span>
-                    </div>
-
-                    <div class="time-box">
-                        <span class="number" id="seconds">00</span>
-                        <span class="label">segundos</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </details>
+        <p class="click-text">
+            clique na estrelinha ♡
+        </p>
 
     </main>
 
 
+    <!-- CONTADOR -->
+
+    <div id="contador" class="countdown-section">
+
+        <div class="countdown-title">
+            até finalmente nos vermos...
+        </div>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span class="number" id="days">00</span>
+                <span class="label">dias</span>
+            </div>
+
+            <div class="time-box">
+                <span class="number" id="hours">00</span>
+                <span class="label">horas</span>
+            </div>
+
+            <div class="time-box">
+                <span class="number" id="minutes">00</span>
+                <span class="label">minutos</span>
+            </div>
+
+            <div class="time-box">
+                <span class="number" id="seconds">00</span>
+                <span class="label">segundos</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
     <!-- CARTA -->
+
     <section>
 
         <h2 class="section-title">
@@ -536,6 +560,7 @@
 
 
     <!-- FOTOS -->
+
     <section>
 
         <h2 class="section-title">
@@ -596,6 +621,7 @@
 
 
     <!-- MÚSICA -->
+
     <section>
 
         <h2 class="section-title">
@@ -609,7 +635,8 @@
             </h3>
 
             <p>
-                coloquei uma musiquinha especial pra acompanhar essa surpresa.
+                coloquei uma musiquinha especial
+                pra acompanhar essa surpresa.
             </p>
 
             <a
@@ -627,10 +654,11 @@
 
 
     <!-- FINAL -->
+
     <section class="ending">
 
         <h2>
-            feliz 1 mês,
+            feliz 1 mês,<br>
             meu amor ♡
         </h2>
 
@@ -648,17 +676,22 @@
     </section>
 
 
-    <!-- CONTADOR -->
+    <!-- CONTADOR FUNCIONANDO SEPARADAMENTE -->
+
     <script>
 
-        // 28 de outubro de 2026
-        const targetDate = new Date("2026-10-28T00:00:00").getTime();
+        const targetDate =
+            new Date("2026-10-28T00:00:00").getTime();
+
 
         function updateCountdown() {
 
-            const now = new Date().getTime();
+            const now =
+                new Date().getTime();
 
-            const difference = targetDate - now;
+            const difference =
+                targetDate - now;
+
 
             if (difference <= 0) {
 
@@ -670,34 +703,51 @@
                 return;
             }
 
-            const days = Math.floor(
-                difference / (1000 * 60 * 60 * 24)
-            );
 
-            const hours = Math.floor(
-                (difference / (1000 * 60 * 60)) % 24
-            );
+            const days =
+                Math.floor(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
 
-            const minutes = Math.floor(
-                (difference / (1000 * 60)) % 60
-            );
 
-            const seconds = Math.floor(
-                (difference / 1000) % 60
-            );
+            const hours =
+                Math.floor(
+                    (difference /
+                    (1000 * 60 * 60)) % 24
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (difference /
+                    (1000 * 60)) % 60
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (difference / 1000) % 60
+                );
+
 
             document.getElementById("days").textContent =
                 String(days).padStart(2, "0");
 
+
             document.getElementById("hours").textContent =
                 String(hours).padStart(2, "0");
+
 
             document.getElementById("minutes").textContent =
                 String(minutes).padStart(2, "0");
 
+
             document.getElementById("seconds").textContent =
                 String(seconds).padStart(2, "0");
+
         }
+
 
         updateCountdown();
 
