@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -41,8 +38,7 @@
             text-align: center;
         }
 
-        h1,
-        h2 {
+        h1, h2 {
             font-family: 'DM Serif Display', serif;
             color: #9b5d78;
             font-weight: 400;
@@ -63,9 +59,6 @@
             line-height: 1.9;
         }
 
-
-        /* CORAÇÃO */
-
         .heart {
             font-size: 3rem;
             color: #d88ca8;
@@ -73,9 +66,7 @@
         }
 
         @keyframes floating {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
 
@@ -84,35 +75,114 @@
             }
         }
 
+        /* APRESENTAÇÃO */
 
-        /* INTRODUÇÃO */
-
-        .intro p {
-            max-width: 650px;
+        .intro {
+            position: relative;
+            overflow: hidden;
         }
 
-        .illustration-container {
-            margin-top: 40px;
+        .intro p {
+            max-width: 550px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
 
+        .date {
+            margin-top: 25px;
+            color: #b87991;
+            font-weight: 600;
+        }
+
+        /* CARTA */
+
+        .letter {
+            background: #fff0f5;
+        }
+
+        .letter-box {
+            max-width: 750px;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 35px rgba(155, 93, 120, 0.08);
+            text-align: left;
+        }
+
+        .letter-box p {
+            margin-bottom: 22px;
+        }
+
+        .letter-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FOTOS */
+
+        .photos {
+            background: #fff7fa;
+        }
+
+        .photo-grid {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .photo {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .illustration {
-            width: min(280px, 75vw);
+        .photo img {
+            width: 100%;
+            max-width: 380px;
             height: auto;
             display: block;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(155, 93, 120, 0.15);
         }
 
-        .illustration-container p {
-            margin-top: 12px;
-            font-size: 0.85rem;
-            color: #a47b8d;
+        .photo-placeholder {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1 / 1;
+            border-radius: 22px;
+            background: #f9dce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #c77c99;
+            box-shadow: 0 10px 30px rgba(155, 93, 120, 0.15);
         }
 
+        .photo p {
+            margin-top: 13px;
+            color: #9b687d;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* DESENHO DA AMIGA */
+
+        .friend-drawing {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            display: block;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(155, 93, 120, 0.15);
+        }
 
         /* CONTAGEM */
+
+        .countdown {
+            background: #fff0f5;
+        }
 
         .countdown-text {
             max-width: 600px;
@@ -122,58 +192,62 @@
         .timer {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
         .time-box {
-            width: 100px;
-            padding: 20px 10px;
-
+            min-width: 85px;
+            padding: 18px 12px;
             background: white;
             border-radius: 18px;
-
-            box-shadow: 0 5px 20px rgba(155, 93, 120, 0.08);
+            box-shadow: 0 8px 25px rgba(155, 93, 120, 0.1);
         }
 
         .time-box span {
             display: block;
-
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.2rem;
-
+            font-size: 2rem;
+            font-weight: 700;
             color: #9b5d78;
         }
 
         .time-box small {
-            color: #a47b8d;
+            color: #a47788;
             font-size: 0.8rem;
         }
 
-
         /* MÚSICA */
 
-        .music-section p {
-            max-width: 550px;
-            margin-bottom: 30px;
+        .music {
+            min-height: 45vh;
+            background: #fff7fa;
+        }
+
+        .music p {
+            max-width: 500px;
+            margin-bottom: 25px;
+            color: #8b6273;
         }
 
         .spotify-button {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
 
-            padding: 15px 30px;
+            padding: 15px 28px;
 
             background: #d88ca8;
             color: white;
 
             text-decoration: none;
 
-            font-weight: 600;
-            font-size: 1rem;
-
             border-radius: 30px;
 
-            box-shadow: 0 5px 15px rgba(155, 93, 120, 0.18);
+            font-size: 0.95rem;
+            font-weight: 600;
+
+            box-shadow: 0 8px 25px rgba(155, 93, 120, 0.15);
 
             transition:
                 transform 0.2s ease,
@@ -182,104 +256,173 @@
 
         .spotify-button:hover {
             transform: translateY(-3px);
-
-            box-shadow:
-                0 8px 20px rgba(155, 93, 120, 0.22);
+            box-shadow: 0 12px 30px rgba(155, 93, 120, 0.2);
         }
 
         .spotify-button:active {
             transform: scale(0.97);
         }
 
+        /* FINAL */
 
-        /* FINALIZAÇÃO */
-
-        .final p {
-            max-width: 650px;
-            margin-bottom: 30px;
+        .final {
+            min-height: 80vh;
         }
 
+        .final p {
+            max-width: 600px;
+            font-size: 1.1rem;
+        }
 
-        /* CELULAR */
+        .final .heart {
+            margin-top: 30px;
+        }
 
-        @media (max-width: 500px) {
+        @media (max-width: 650px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
 
-            section {
-                padding: 60px 20px;
+            .letter-box {
+                padding: 30px 22px;
             }
 
             .time-box {
-                width: 85px;
-                padding: 15px 8px;
+                min-width: 75px;
             }
 
             .time-box span {
-                font-size: 1.8rem;
-            }
-
-            .spotify-button {
-                padding: 14px 25px;
+                font-size: 1.6rem;
             }
         }
-
     </style>
 </head>
 
-
 <body>
 
-
-    <!-- INTRODUÇÃO -->
+    <!-- APRESENTAÇÃO -->
 
     <section class="intro">
+        <div class="heart">♡</div>
 
-        <div class="heart">
-            ♡
-        </div>
-
-        <h1>
-            um mês de nós
-        </h1>
+        <h1>um mês de nós</h1>
 
         <p>
-            um mês pode parecer pouco para algumas pessoas,
-            mas para mim já significa tanta coisa...
-            significa você, nós e todas as pequenas coisas
-            que fizeram esse tempo ser tão especial.
+            um pequeno cantinho feito especialmente
+            para comemorar o nosso primeiro mês juntos.
         </p>
 
+        <p class="date">
+            02.09.2026
+        </p>
+    </section>
 
-        <div class="illustration-container">
 
-            <img
-                class="illustration"
-                src="Ilustracao_20260901_3_2.png"
-                alt="ilustração nossa"
-            >
+    <!-- CARTA -->
+
+    <section class="letter">
+        <h2>uma cartinha pra você ♡</h2>
+
+        <div class="letter-box">
 
             <p>
-                uma ajudinha da nossa amiga
+                oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
+            </p>
+
+            <p>
+                saiba que eu sou eternamente grata por ter você na minha vida.
+                você me enche de vontade de viver, de aproveitar cada momento ao seu lado
+                e, principalmente, de te fazer feliz. muito obrigada por ser essa pessoa
+                incrível que sempre tenta fazer dar certo e que se esforça por nós.
+                eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
+                porque são elas que tornam tudo ainda mais especial.
+            </p>
+
+            <p>
+                eu tenho certeza de que você é o amor da minha vida, porque eu nunca
+                conheci alguém que me entendesse como você me entende. você me agrada,
+                faz o que eu gosto, realiza minhas vontades e sempre tenta me ver feliz.
+                além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo
+                suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
+            </p>
+
+            <p>
+                esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter
+                você comigo e o quanto quero continuar construindo muitas memórias ao
+                seu lado. e eu tô MUITO ansiosa pra outubro chegar logo, porque finalmente
+                vamos poder nos ver e viver tudo isso juntinhos de verdade.
+                só de pensar que vou poder te encontrar, ficar pertinho de você e
+                finalmente passar um tempinho ao seu lado, eu já fico toda bobinha.
+                mal posso esperar por esse dia!!
+            </p>
+
+            <p>
+                espero que esse seja só o começo de uma história muito, muito longa,
+                cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo,
+                meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês
+                de muitos outros, MUITOS OUTROS!
+            </p>
+
+            <p>
+                feliz 1 mês pra nós!! 🩷
             </p>
 
         </div>
-
     </section>
 
+
+    <!-- FOTOS -->
+
+    <section class="photos">
+        <h2>nossos momentos ♡</h2>
+
+        <div class="photo-grid">
+
+            <div class="photo">
+                <img
+                    src="content.png"
+                    alt="nosso momento"
+                >
+
+                <p>um dia vai ser a gente!!</p>
+            </div>
+
+
+            <div class="photo">
+                <img
+                    src="image.png"
+                    alt="nosso momento"
+                >
+
+                <p>até nos joguinhos a gente fica juntinho ♡</p>
+            </div>
+
+
+            <!-- DESENHO FICA AQUI -->
+
+            <div class="photo">
+                <img
+                    class="friend-drawing"
+                    src="Ilustracao_20260901_3_2.png"
+                    alt="ilustração nossa"
+                >
+
+                <p>uma ajudinha da nossa amiga</p>
+            </div>
+
+        </div>
+    </section>
 
 
     <!-- CONTAGEM PARA SE VER -->
 
     <section class="countdown">
-
-        <h2>
-            até a gente se ver ♡
-        </h2>
+        <h2>até a gente se ver ♡</h2>
 
         <p class="countdown-text">
             agora só falta esperar um pouquinho...
             outubro chega logo, por favor!! 🥹🩷
         </p>
-
 
         <div class="timer">
 
@@ -304,24 +447,19 @@
             </div>
 
         </div>
-
     </section>
-
 
 
     <!-- MÚSICA -->
 
-    <section class="music-section">
+    <section class="music">
 
-        <h2>
-            uma música pra nós ♡
-        </h2>
+        <h2>uma música pra nós ♡</h2>
 
         <p>
             coloquei essa aqui porque, de alguma forma,
             ela sempre me faz lembrar de você. 🩷
         </p>
-
 
         <a
             href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN?si=vx4yQH5bQWyv0okizapDmw"
@@ -335,14 +473,11 @@
     </section>
 
 
-
     <!-- FINALIZAÇÃO -->
 
     <section class="final">
 
-        <h2>
-            e isso é só o começo ♡
-        </h2>
+        <h2>e isso é só o começo ♡</h2>
 
         <p>
             que esse seja só o primeiro de muitos meses,
@@ -351,100 +486,58 @@
             esperar pra finalmente te ver. 🩷
         </p>
 
-        <div class="heart">
-            ♡
-        </div>
+        <div class="heart">♡</div>
 
     </section>
 
 
-
-    <!-- CONTAGEM -->
-
     <script>
-
-        const targetDate =
-            new Date("2026-10-28T00:00:00");
-
+        const targetDate = new Date("2026-10-28T00:00:00");
 
         function updateCountdown() {
-
             const now = new Date();
-
-            const difference =
-                targetDate - now;
-
+            const difference = targetDate - now;
 
             if (difference <= 0) {
-
                 document.getElementById("days").textContent = "00";
-
                 document.getElementById("hours").textContent = "00";
-
                 document.getElementById("minutes").textContent = "00";
-
                 document.getElementById("seconds").textContent = "00";
-
                 return;
             }
 
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
 
-            const days =
-                Math.floor(
-                    difference /
-                    (1000 * 60 * 60 * 24)
-                );
+            const hours = Math.floor(
+                (difference / (1000 * 60 * 60)) % 24
+            );
 
+            const minutes = Math.floor(
+                (difference / (1000 * 60)) % 60
+            );
 
-            const hours =
-                Math.floor(
-                    (difference /
-                    (1000 * 60 * 60)) % 24
-                );
-
-
-            const minutes =
-                Math.floor(
-                    (difference /
-                    (1000 * 60)) % 60
-                );
-
-
-            const seconds =
-                Math.floor(
-                    (difference /
-                    1000) % 60
-                );
-
+            const seconds = Math.floor(
+                (difference / 1000) % 60
+            );
 
             document.getElementById("days").textContent =
                 String(days).padStart(2, "0");
 
-
             document.getElementById("hours").textContent =
                 String(hours).padStart(2, "0");
-
 
             document.getElementById("minutes").textContent =
                 String(minutes).padStart(2, "0");
 
-
             document.getElementById("seconds").textContent =
                 String(seconds).padStart(2, "0");
-
         }
 
-
         updateCountdown();
-
-        setInterval(
-            updateCountdown,
-            1000
-        );
-
+        setInterval(updateCountdown, 1000);
     </script>
 
-
 </body>
-
 </html>
