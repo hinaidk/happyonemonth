@@ -1,650 +1,362 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>um mês de nós ♡</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    <title>um mês de nós ♡</title>
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    body {
-        background:
-            radial-gradient(circle at top left, #fff0f6 0%, transparent 35%),
-            radial-gradient(circle at bottom right, #ffe3ef 0%, transparent 35%),
-            #fff8fb;
-        color: #70485b;
-        font-family: "Quicksand", sans-serif;
-        overflow-x: hidden;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
-    body::before,
-    body::after {
-        content: "♡";
-        position: fixed;
-        font-family: serif;
-        font-size: 150px;
-        color: rgba(238, 158, 190, 0.08);
-        z-index: -1;
-        pointer-events: none;
-    }
+    <style>
 
-    body::before {
-        top: 5%;
-        left: -50px;
-        transform: rotate(-15deg);
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body::after {
-        bottom: 5%;
-        right: -50px;
-        transform: rotate(15deg);
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* =========================
-       APRESENTAÇÃO
-    ========================= */
+        body {
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #fff0f6 0%,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #ffe3ef 0%,
+                    transparent 35%
+                ),
+                #fff8fb;
 
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 40px 25px;
-    }
+            color: #70485b;
+            font-family: "Quicksand", sans-serif;
+            overflow-x: hidden;
+        }
 
-    .small-text {
-        font-size: 14px;
-        letter-spacing: 2px;
-        color: #b47b93;
-        margin-bottom: 15px;
-    }
+        body::before,
+        body::after {
+            content: "♡";
+            position: fixed;
+            font-family: serif;
+            font-size: 150px;
+            color: rgba(238, 158, 190, 0.08);
+            z-index: -1;
+            pointer-events: none;
+        }
 
-    .hero h1 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(55px, 14vw, 90px);
-        font-weight: 500;
-        line-height: 0.95;
-        color: #9b5f79;
-        margin-bottom: 25px;
-    }
+        body::before {
+            top: 5%;
+            left: -50px;
+            transform: rotate(-15deg);
+        }
 
-    .subtitle {
-        max-width: 500px;
-        font-size: 16px;
-        line-height: 1.8;
-        color: #8d6576;
-        margin-bottom: 28px;
-    }
+        body::after {
+            bottom: 5%;
+            right: -50px;
+            transform: rotate(15deg);
+        }
 
-    .spotify {
-        display: inline-block;
-        text-decoration: none;
-        color: #a85f7c;
-        background: rgba(255,255,255,0.75);
-        border: 1px solid #f1cad9;
-        padding: 12px 22px;
-        border-radius: 30px;
-        transition: 0.25s;
-    }
 
-    .spotify:hover {
-        transform: translateY(-2px);
-        background: #ffffff;
-    }
+        /* =========================
+           APRESENTAÇÃO
+        ========================= */
 
-    /* =========================
-       CARTA
-    ========================= */
+        .hero {
+            min-height: 100vh;
 
-    .letter {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 100px 25px;
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-    .letter h2 {
-        text-align: center;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 48px;
-        font-weight: 500;
-        color: #9b5f79;
-        margin-bottom: 40px;
-    }
+            text-align: center;
 
-    .letter p {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 21px;
-        line-height: 1.8;
-        color: #70485b;
-        margin-bottom: 22px;
-    }
+            padding: 50px 25px;
+        }
 
-    /* =========================
-       FOTOS
-    ========================= */
-
-    .photos {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 80px 20px;
-    }
-
-    .photos h2 {
-        text-align: center;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 48px;
-        font-weight: 500;
-        color: #9b5f79;
-        margin-bottom: 40px;
-    }
-
-    .photo-grid {
-        display: grid;
-        grid-template-columns:
-            repeat(auto-fit, minmax(230px, 1fr));
-        gap: 25px;
-    }
-
-    .photo {
-        background: #ffffff;
-        padding: 12px 12px 20px;
-        border-radius: 8px;
-        box-shadow:
-            0 10px 30px rgba(112,72,91,0.10);
-        transform: rotate(-1deg);
-    }
-
-    .photo:nth-child(2) {
-        transform: rotate(1deg);
-    }
-
-    .photo:nth-child(3) {
-        transform: rotate(-0.5deg);
-    }
-
-    .photo img {
-        width: 100%;
-        display: block;
-        border-radius: 4px;
-    }
-
-    .photo p {
-        text-align: center;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 19px;
-        color: #8f5c72;
-        margin-top: 13px;
-    }
-
-    .photo-placeholder {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #fff0f6;
-        border-radius: 4px;
-        font-size: 55px;
-        color: #d783a3;
-    }
-
-    /* =========================
-       CONTADOR
-    ========================= */
-
-    .countdown-section {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 80px 20px;
-    }
-
-    .countdown-section h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 48px;
-        font-weight: 500;
-        color: #9b5f79;
-        margin-bottom: 12px;
-    }
-
-    .countdown-section > p {
-        font-size: 15px;
-        color: #a47789;
-        margin-bottom: 40px;
-    }
-
-    .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    .time-box {
-        min-width: 78px;
-        padding: 18px 10px;
-        background: rgba(255,255,255,0.8);
-        border: 1px solid #f1cad9;
-        border-radius: 18px;
-        box-shadow:
-            0 8px 25px rgba(185,112,143,0.08);
-    }
-
-    .time-number {
-        display: block;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 34px;
-        color: #9b5f79;
-    }
-
-    .time-label {
-        display: block;
-        font-size: 9px;
-        letter-spacing: 1px;
-        color: #b47b93;
-        margin-top: 3px;
-    }
-
-    /* =========================
-       FINALIZAÇÃO
-    ========================= */
-
-    .ending {
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 80px 25px;
-    }
-
-    .ending h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 52px;
-        font-weight: 500;
-        line-height: 1.05;
-        color: #9b5f79;
-        margin-bottom: 25px;
-    }
-
-    .ending p {
-        max-width: 600px;
-        font-size: 16px;
-        line-height: 1.8;
-        color: #806071;
-    }
-
-    .heart {
-        font-size: 65px;
-        color: #d783a3;
-        margin-top: 35px;
-    }
-
-    /* =========================
-       CELULAR
-    ========================= */
-
-    @media (max-width: 600px) {
+        .small-text {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #b47b93;
+            margin-bottom: 15px;
+        }
 
         .hero h1 {
-            font-size: 64px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(48px, 10vw, 80px);
+            font-weight: 500;
+            line-height: 0.95;
+            color: #70485b;
+            margin-bottom: 25px;
         }
 
-        .letter h2,
-        .photos h2,
+        .hero p {
+            max-width: 550px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #8b6273;
+        }
+
+
+        /* =========================
+           DESENHO
+        ========================= */
+
+        .couple-drawing {
+            width: min(600px, 92vw);
+            height: auto;
+
+            display: block;
+
+            margin: 35px auto 20px;
+
+            border-radius: 20px;
+
+            filter: drop-shadow(
+                0 15px 25px
+                rgba(180, 123, 147, 0.15)
+            );
+
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           DIVISOR
+        ========================= */
+
+        .divider {
+            width: 70px;
+            height: 1px;
+            background: #e6b6c9;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .divider::after {
+            content: "♡";
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background: #fff8fb;
+
+            padding: 0 10px;
+
+            color: #d998b3;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           CONTADOR
+        ========================= */
+
+        .countdown-section {
+            min-height: 70vh;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 70px 25px;
+        }
+
         .countdown-section h2 {
-            font-size: 40px;
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(35px, 7vw, 55px);
+
+            font-weight: 500;
+
+            color: #70485b;
+
+            margin-bottom: 15px;
         }
 
-        .letter p {
-            font-size: 19px;
+        .countdown-text {
+            color: #9a7080;
+
+            font-size: 15px;
+
+            margin-bottom: 40px;
         }
 
-        .ending h2 {
-            font-size: 43px;
+        .countdown {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
         }
 
         .time-box {
-            min-width: 68px;
-        }
-    }
-</style>
-</head>
+            min-width: 90px;
 
-<body>
+            padding: 18px 12px;
 
-<!-- =========================
-     1. APRESENTAÇÃO
-========================= -->
+            background: rgba(255, 255, 255, 0.65);
 
-<section class="hero">
+            border: 1px solid #f0d4df;
 
-    <div class="small-text">
-        para o meu gatinho ♡
-    </div>
+            border-radius: 18px;
 
-    <h1>
-        um mês<br>
-        de nós
-    </h1>
+            box-shadow:
+                0 10px 30px
+                rgba(180, 123, 147, 0.08);
 
-    <p class="subtitle">
-        um pequeno cantinho feito especialmente
-        para guardar um pouquinho do nosso amor.
-    </p>
-
-    <a
-        class="spotify"
-        href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        ouvir no Spotify ♫
-    </a>
-
-</section>
-
-<!-- =========================
-     2. CARTA
-========================= -->
-
-<section class="letter">
-
-    <h2>
-        uma cartinha pra você ♡
-    </h2>
-
-    <p>
-        oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
-    </p>
-
-    <p>
-        saiba que eu sou eternamente grata por ter você na minha vida.
-        você me enche de vontade de viver, de aproveitar cada momento ao seu lado
-        e, principalmente, de te fazer feliz. muito obrigada por ser essa pessoa
-        incrível que sempre tenta fazer dar certo e que se esforça por nós.
-        eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
-        porque são elas que tornam tudo ainda mais especial.
-    </p>
-
-    <p>
-        eu tenho certeza de que você é o amor da minha vida, porque eu nunca
-        conheci alguém que me entendesse como você me entende. você me agrada,
-        faz o que eu gosto, realiza minhas vontades e sempre tenta me ver feliz.
-        além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo
-        suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
-    </p>
-
-    <p>
-        esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter
-        você comigo e o quanto quero continuar construindo muitas memórias ao
-        seu lado. e eu tô MUITO ansiosa pra outubro chegar logo, porque finalmente
-        vamos poder nos ver e viver tudo isso juntinhos de verdade.
-        só de pensar que vou poder te encontrar, ficar pertinho de você e
-        finalmente passar um tempinho ao seu lado, eu já fico toda bobinha.
-        mal posso esperar por esse dia!!
-    </p>
-
-    <p>
-        espero que esse seja só o começo de uma história muito, muito longa,
-        cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo,
-        meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês
-        de muitos outros, MUITOS OUTROS!
-    </p>
-
-    <p>
-        feliz 1 mês pra nós!! 🩷
-    </p>
-
-</section>
-
-<!-- =========================
-     3. FOTOS
-========================= -->
-
-<section class="photos">
-
-    <h2>
-        nossos momentinhos ♡
-    </h2>
-
-    <div class="photo-grid">
-
-        <div class="photo">
-
-            <img
-                src="content.png"
-                alt="nosso momentinho"
-            >
-
-            <p>
-                um dia vai ser a gente!!
-            </p>
-
-        </div>
-
-        <div class="photo">
-
-            <img
-                src="image.png"
-                alt="nosso momentinho"
-            >
-
-            <p>
-                até nos joguinhos a gente fica juntinho ♡
-            </p>
-
-        </div>
-
-        <div class="photo">
-
-            <div class="photo-placeholder">
-                ♡
-            </div>
-
-            <p>
-                uma ajudinha da nossa amiga
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     4. TEMPO ATÉ SE VEREM
-========================= -->
-
-<section class="countdown-section">
-
-    <h2>
-        até o nosso encontro ♡
-    </h2>
-
-    <p>
-        contando os dias até a gente finalmente se ver.
-    </p>
-
-    <div class="countdown">
-
-        <div class="time-box">
-
-            <span
-                class="time-number"
-                id="days"
-            >
-                00
-            </span>
-
-            <span class="time-label">
-                DIAS
-            </span>
-
-        </div>
-
-        <div class="time-box">
-
-            <span
-                class="time-number"
-                id="hours"
-            >
-                00
-            </span>
-
-            <span class="time-label">
-                HORAS
-            </span>
-
-        </div>
-
-        <div class="time-box">
-
-            <span
-                class="time-number"
-                id="minutes"
-            >
-                00
-            </span>
-
-            <span class="time-label">
-                MINUTOS
-            </span>
-
-        </div>
-
-        <div class="time-box">
-
-            <span
-                class="time-number"
-                id="seconds"
-            >
-                00
-            </span>
-
-            <span class="time-label">
-                SEGUNDOS
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     5. FINALIZAÇÃO
-========================= -->
-
-<section class="ending">
-
-    <h2>
-        feliz 1 mês,<br>
-        meu amor ♡
-    </h2>
-
-    <p>
-        que esse seja só o primeiro de muitos meses,
-        muitas memórias e muitos momentos nossos.
-        e que outubro chegue logo, porque eu mal posso
-        esperar pra finalmente te ver. 🩷
-    </p>
-
-    <div class="heart">
-        ♡
-    </div>
-
-</section>
-
-<!-- =========================
-     CONTADOR
-========================= -->
-
-<script>
-
-    const targetDate =
-        new Date("2026-10-28T00:00:00").getTime();
-
-    function updateCountdown() {
-
-        const now =
-            new Date().getTime();
-
-        const difference =
-            targetDate - now;
-
-        if (difference <= 0) {
-
-            document.getElementById("days").textContent = "00";
-            document.getElementById("hours").textContent = "00";
-            document.getElementById("minutes").textContent = "00";
-            document.getElementById("seconds").textContent = "00";
-
-            return;
+            backdrop-filter: blur(5px);
         }
 
-        const days =
-            Math.floor(
-                difference /
-                (1000 * 60 * 60 * 24)
-            );
+        .time-number {
+            display: block;
 
-        const hours =
-            Math.floor(
-                (difference /
-                (1000 * 60 * 60)) % 24
-            );
+            font-family: "Cormorant Garamond", serif;
 
-        const minutes =
-            Math.floor(
-                (difference /
-                (1000 * 60)) % 60
-            );
+            font-size: 38px;
 
-        const seconds =
-            Math.floor(
-                (difference / 1000) % 60
-            );
+            line-height: 1;
 
-        document.getElementById("days").textContent =
-            String(days).padStart(2, "0");
+            color: #70485b;
 
-        document.getElementById("hours").textContent =
-            String(hours).padStart(2, "0");
+            margin-bottom: 7px;
+        }
 
-        document.getElementById("minutes").textContent =
-            String(minutes).padStart(2, "0");
+        .time-label {
+            font-size: 10px;
 
-        document.getElementById("seconds").textContent =
-            String(seconds).padStart(2, "0");
-    }
+            letter-spacing: 1.5px;
 
-    updateCountdown();
+            color: #b47b93;
+        }
 
-    setInterval(
-        updateCountdown,
-        1000
-    );
 
-</script>
+        /* =========================
+           FINALIZAÇÃO
+        ========================= */
 
-</body>
-</html>
+        .ending {
+            min-height: 80vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 70px 25px;
+        }
+
+        .ending h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(45px, 9vw, 70px);
+
+            font-weight: 500;
+
+            line-height: 1;
+
+            color: #70485b;
+
+            margin-bottom: 30px;
+        }
+
+        .ending p {
+            max-width: 600px;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            color: #8b6273;
+        }
+
+        .heart {
+            font-family: serif;
+
+            font-size: 70px;
+
+            color: #d998b3;
+
+            margin-top: 40px;
+
+            animation: heartbeat 1.8s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 35px 20px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .couple-drawing {
+                width: 95vw;
+                margin
