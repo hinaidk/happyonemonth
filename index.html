@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -25,531 +22,261 @@
         }
 
         body {
-            background:
-                radial-gradient(
-                    circle at top left,
-                    #fff0f6 0%,
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at bottom right,
-                    #ffe3ef 0%,
-                    transparent 35%
-                ),
-                #fff8fb;
-
-            color: #70485b;
-            font-family: "Quicksand", sans-serif;
+            background: #fff7fa;
+            color: #5f4652;
+            font-family: 'Quicksand', sans-serif;
             overflow-x: hidden;
         }
 
-        body::before,
-        body::after {
-            content: "♡";
-            position: fixed;
-            font-family: serif;
-            font-size: 150px;
-            color: rgba(238, 158, 190, 0.08);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        body::before {
-            top: 5%;
-            left: -50px;
-            transform: rotate(-15deg);
-        }
-
-        body::after {
-            bottom: 5%;
-            right: -50px;
-            transform: rotate(15deg);
-        }
-
-
-        /* =========================
-           APRESENTAÇÃO
-        ========================= */
-
-        .hero {
+        section {
             min-height: 100vh;
-
+            padding: 70px 25px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
             text-align: center;
-
-            padding: 50px 25px;
         }
 
-        .small-text {
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: #b47b93;
+        h1, h2 {
+            font-family: 'DM Serif Display', serif;
+            color: #9b5d78;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 12vw, 6rem);
             margin-bottom: 15px;
         }
 
-        .hero h1 {
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(48px, 10vw, 80px);
-            font-weight: 500;
-            line-height: 0.95;
-            color: #70485b;
-            margin-bottom: 25px;
+        h2 {
+            font-size: clamp(2.2rem, 8vw, 4rem);
+            margin-bottom: 35px;
         }
 
-        .hero p {
-            max-width: 550px;
-            font-size: 16px;
-            line-height: 1.8;
-            color: #8b6273;
+        p {
+            font-size: 1rem;
+            line-height: 1.9;
         }
 
-
-        /* =========================
-           DESENHO
-        ========================= */
-
-        .couple-drawing {
-            width: min(600px, 92vw);
-            height: auto;
-
-            display: block;
-
-            margin: 35px auto 20px;
-
-            border-radius: 20px;
-
-            filter: drop-shadow(
-                0 15px 25px
-                rgba(180, 123, 147, 0.15)
-            );
-
-            animation: floating 4s ease-in-out infinite;
+        .heart {
+            font-size: 3rem;
+            color: #d88ca8;
+            animation: floating 3s ease-in-out infinite;
         }
 
         @keyframes floating {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
 
             50% {
-                transform: translateY(-8px);
+                transform: translateY(-10px);
             }
-
         }
 
+        /* APRESENTAÇÃO */
 
-        /* =========================
-           MÚSICA
-        ========================= */
+        .intro {
+            position: relative;
+            overflow: hidden;
+        }
 
-        .spotify {
-            display: inline-block;
+        .intro p {
+            max-width: 550px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
 
+        .date {
             margin-top: 25px;
-
-            padding: 12px 22px;
-
-            border-radius: 30px;
-
-            background: #f3c4d6;
-
-            color: #70485b;
-
-            text-decoration: none;
-
-            font-size: 14px;
+            color: #b87991;
             font-weight: 600;
-
-            transition: 0.3s ease;
         }
 
-        .spotify:hover {
-            transform: translateY(-2px);
-            background: #eeb5cb;
-        }
-
-
-        /* =========================
-           SEÇÕES
-        ========================= */
-
-        section {
-            padding: 90px 25px;
-        }
-
-        .section-title {
-            text-align: center;
-
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: clamp(40px, 8vw, 65px);
-
-            font-weight: 500;
-
-            color: #70485b;
-
-            margin-bottom: 45px;
-        }
-
-
-        /* =========================
-           CARTA
-        ========================= */
+        /* CARTA */
 
         .letter {
+            background: #fff0f5;
+        }
+
+        .letter-box {
             max-width: 750px;
-
-            margin: 0 auto;
-
-            background: rgba(255, 255, 255, 0.6);
-
-            padding: 45px 35px;
-
+            background: rgba(255, 255, 255, 0.75);
+            padding: 40px 30px;
             border-radius: 25px;
-
-            box-shadow:
-                0 15px 40px
-                rgba(180, 123, 147, 0.10);
+            box-shadow: 0 10px 35px rgba(155, 93, 120, 0.08);
+            text-align: left;
         }
 
-        .letter p {
-            font-size: 16px;
-
-            line-height: 2;
-
-            color: #80586a;
-
-            margin-bottom: 25px;
+        .letter-box p {
+            margin-bottom: 22px;
         }
 
-        .letter p:last-child {
+        .letter-box p:last-child {
             margin-bottom: 0;
         }
 
-
-        /* =========================
-           FOTOS
-        ========================= */
+        /* FOTOS */
 
         .photos {
-            max-width: 950px;
+            background: #fff7fa;
+        }
 
-            margin: 0 auto;
-
+        .photo-grid {
+            width: 100%;
+            max-width: 900px;
             display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .photo {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .photo img {
             width: 100%;
-            height: 300px;
-
-            object-fit: cover;
-
-            border-radius: 20px;
-
+            max-width: 380px;
+            height: auto;
             display: block;
-
-            box-shadow:
-                0 12px 30px
-                rgba(180, 123, 147, 0.15);
-        }
-
-        .photo p {
-            margin-top: 14px;
-
-            font-size: 14px;
-
-            color: #9a7181;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(155, 93, 120, 0.15);
         }
 
         .photo-placeholder {
             width: 100%;
-            height: 300px;
-
+            max-width: 380px;
+            aspect-ratio: 1 / 1;
+            border-radius: 22px;
+            background: #f9dce7;
             display: flex;
-
             align-items: center;
             justify-content: center;
-
-            background: #f9dce8;
-
-            border-radius: 20px;
-
-            font-family: serif;
-
-            font-size: 70px;
-
-            color: #d998b3;
+            font-size: 5rem;
+            color: #c77c99;
+            box-shadow: 0 10px 30px rgba(155, 93, 120, 0.15);
         }
 
+        .photo p {
+            margin-top: 13px;
+            color: #9b687d;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
 
-        /* =========================
-           CONTAGEM
-        ========================= */
+        /* DESENHO DA AMIGA */
 
-        .countdown-section {
-            text-align: center;
+        .friend-drawing {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            display: block;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(155, 93, 120, 0.15);
+        }
+
+        /* CONTAGEM */
+
+        .countdown {
+            background: #fff0f5;
         }
 
         .countdown-text {
             max-width: 600px;
-
-            margin: -20px auto 40px;
-
-            font-size: 16px;
-
-            line-height: 1.8;
-
-            color: #8b6273;
+            margin-bottom: 35px;
         }
 
-        .countdown {
-            max-width: 700px;
-
-            margin: 0 auto;
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
+        .timer {
+            display: flex;
+            justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
         .time-box {
-            background: rgba(255, 255, 255, 0.7);
-
-            padding: 25px 10px;
-
-            border-radius: 20px;
-
-            box-shadow:
-                0 10px 25px
-                rgba(180, 123, 147, 0.10);
+            min-width: 85px;
+            padding: 18px 12px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(155, 93, 120, 0.1);
         }
 
         .time-box span {
             display: block;
-
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: 42px;
-
-            color: #70485b;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #9b5d78;
         }
 
         .time-box small {
-            font-size: 12px;
-
-            letter-spacing: 1px;
-
-            color: #a47789;
+            color: #a47788;
+            font-size: 0.8rem;
         }
 
+        /* FINAL */
 
-        /* =========================
-           FINALIZAÇÃO
-        ========================= */
-
-        .ending {
-            min-height: 70vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 70px 25px;
+        .final {
+            min-height: 80vh;
         }
 
-        .ending h2 {
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: clamp(45px, 9vw, 70px);
-
-            font-weight: 500;
-
-            line-height: 1;
-
-            color: #70485b;
-
-            margin-bottom: 30px;
-        }
-
-        .ending p {
+        .final p {
             max-width: 600px;
-
-            font-size: 16px;
-
-            line-height: 1.9;
-
-            color: #8b6273;
+            font-size: 1.1rem;
         }
 
-        .heart {
-            font-family: serif;
-
-            font-size: 70px;
-
-            color: #d998b3;
-
-            margin-top: 40px;
-
-            animation: heartbeat 1.8s ease-in-out infinite;
+        .final .heart {
+            margin-top: 30px;
         }
 
-        @keyframes heartbeat {
-
-            0%,
-            100% {
-                transform: scale(1);
+        @media (max-width: 650px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
             }
 
-            50% {
-                transform: scale(1.12);
-            }
-
-        }
-
-
-        /* =========================
-           CELULAR
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            .hero {
-                padding: 35px 20px;
-            }
-
-            .hero h1 {
-                font-size: 55px;
-            }
-
-            .hero p {
-                font-size: 14px;
-            }
-
-            .couple-drawing {
-                width: 95vw;
-                margin: 25px auto 15px;
-            }
-
-            section {
-                padding: 65px 20px;
-            }
-
-            .letter {
+            .letter-box {
                 padding: 30px 22px;
             }
 
-            .letter p {
-                font-size: 15px;
-                line-height: 1.9;
-            }
-
-            .photos {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .photo img,
-            .photo-placeholder {
-                height: 330px;
-            }
-
-            .countdown {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-
             .time-box {
-                padding: 20px 8px;
+                min-width: 75px;
             }
 
             .time-box span {
-                font-size: 36px;
+                font-size: 1.6rem;
             }
-
-            .ending {
-                min-height: 60vh;
-            }
-
         }
-
     </style>
 </head>
 
-
 <body>
 
+    <!-- APRESENTAÇÃO -->
 
-    <!-- =========================
-         APRESENTAÇÃO
-    ========================= -->
+    <section class="intro">
+        <div class="heart">♡</div>
 
-    <section class="hero">
-
-        <div class="small-text">
-            01.09.2026 ♡
-        </div>
-
-        <h1>
-            um mês<br>
-            de nós
-        </h1>
+        <h1>um mês de nós</h1>
 
         <p>
-            um pequeno cantinho feito para guardar
-            um pouquinho do nosso primeiro mês juntos.
+            um pequeno cantinho feito especialmente
+            para comemorar o nosso primeiro mês juntos.
         </p>
 
-        <img
-            class="couple-drawing"
-            src="Ilustracao_20260901_3_2.png"
-            alt="ilustração nossa"
-        >
-
-        <a
-            class="spotify"
-            href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
-            target="_blank"
-        >
-            ♡ nossa música
-        </a>
-
+        <p class="date">
+            02.09.2026
+        </p>
     </section>
 
 
-    <!-- =========================
-         CARTA
-    ========================= -->
+    <!-- CARTA -->
 
-    <section>
+    <section class="letter">
+        <h2>uma cartinha pra você ♡</h2>
 
-        <h2 class="section-title">
-            uma cartinha pra você
-        </h2>
-
-        <div class="letter">
+        <div class="letter-box">
 
             <p>
                 oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
@@ -594,118 +321,93 @@
             </p>
 
         </div>
-
     </section>
 
 
-    <!-- =========================
-         FOTOS
-    ========================= -->
+    <!-- FOTOS -->
 
-    <section>
+    <section class="photos">
+        <h2>nossos momentos ♡</h2>
 
-        <h2 class="section-title">
-            nossos momentinhos
-        </h2>
-
-        <div class="photos">
+        <div class="photo-grid">
 
             <div class="photo">
-
                 <img
                     src="content.png"
-                    alt="nosso momentinho"
+                    alt="nosso momento"
                 >
 
-                <p>
-                    um dia vai ser a gente!!
-                </p>
-
+                <p>um dia vai ser a gente!!</p>
             </div>
 
 
             <div class="photo">
-
                 <img
                     src="image.png"
-                    alt="nosso momentinho"
+                    alt="nosso momento"
                 >
 
-                <p>
-                    até nos joguinhos a gente fica juntinho ♡
-                </p>
-
+                <p>até nos joguinhos a gente fica juntinho ♡</p>
             </div>
 
 
+            <!-- DESENHO FICA AQUI -->
+
             <div class="photo">
+                <img
+                    class="friend-drawing"
+                    src="Ilustracao_20260901_3_2.png"
+                    alt="ilustração nossa"
+                >
 
-                <div class="photo-placeholder">
-                    ♡
-                </div>
-
-                <p>
-                    uma ajudinha da nossa amiga
-                </p>
-
+                <p>uma ajudinha da nossa amiga</p>
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- =========================
-         CONTAGEM
-    ========================= -->
+    <!-- CONTAGEM PARA SE VER -->
 
-    <section class="countdown-section">
-
-        <h2 class="section-title">
-            até a gente se ver
-        </h2>
+    <section class="countdown">
+        <h2>até a gente se ver ♡</h2>
 
         <p class="countdown-text">
-            agora só falta esperar mais um pouquinho
-            pra finalmente podermos nos encontrar em outubro. 🩷
+            agora só falta esperar um pouquinho...
+            outubro chega logo, por favor!! 🥹🩷
         </p>
 
-        <div class="countdown">
+        <div class="timer">
 
             <div class="time-box">
                 <span id="days">00</span>
-                <small>DIAS</small>
+                <small>dias</small>
             </div>
 
             <div class="time-box">
                 <span id="hours">00</span>
-                <small>HORAS</small>
+                <small>horas</small>
             </div>
 
             <div class="time-box">
                 <span id="minutes">00</span>
-                <small>MINUTOS</small>
+                <small>minutos</small>
             </div>
 
             <div class="time-box">
                 <span id="seconds">00</span>
-                <small>SEGUNDOS</small>
+                <small>segundos</small>
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- =========================
-         FINALIZAÇÃO
-    ========================= -->
+    <!-- FINALIZAÇÃO -->
 
-    <section class="ending">
+    <section class="final">
 
-        <h2>
-            ainda é só o começo ♡
-        </h2>
+        <h2>e isso é só o começo ♡</h2>
 
         <p>
             que esse seja só o primeiro de muitos meses,
@@ -714,40 +416,27 @@
             esperar pra finalmente te ver. 🩷
         </p>
 
-        <div class="heart">
-            ♡
-        </div>
+        <div class="heart">♡</div>
 
     </section>
 
 
-    <!-- =========================
-         CONTADOR
-    ========================= -->
-
     <script>
-
-        const targetDate = new Date("2026-10-28T00:00:00").getTime();
+        const targetDate = new Date("2026-10-28T00:00:00");
 
         function updateCountdown() {
-
-            const now = new Date().getTime();
-
+            const now = new Date();
             const difference = targetDate - now;
 
             if (difference <= 0) {
-
                 document.getElementById("days").textContent = "00";
                 document.getElementById("hours").textContent = "00";
                 document.getElementById("minutes").textContent = "00";
                 document.getElementById("seconds").textContent = "00";
-
                 return;
             }
 
-            const days = Math.floor(
-                difference / (1000 * 60 * 60 * 24)
-            );
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
             const hours = Math.floor(
                 (difference / (1000 * 60 * 60)) % 24
@@ -775,11 +464,8 @@
         }
 
         updateCountdown();
-
         setInterval(updateCountdown, 1000);
-
     </script>
 
 </body>
-
 </html>
