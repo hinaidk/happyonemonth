@@ -132,7 +132,8 @@
 
         @keyframes floating {
 
-            0% {
+            0%,
+            100% {
                 transform: translateY(0);
             }
 
@@ -140,132 +141,222 @@
                 transform: translateY(-8px);
             }
 
-            100% {
-                transform: translateY(0);
-            }
-
         }
 
 
         /* =========================
-           DIVISOR
+           MÚSICA
         ========================= */
 
-        .divider {
-            width: 70px;
-            height: 1px;
-            background: #e6b6c9;
-            margin: 30px auto;
-            position: relative;
+        .spotify {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 12px 22px;
+
+            border-radius: 30px;
+
+            background: #f3c4d6;
+
+            color: #70485b;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
         }
 
-        .divider::after {
-            content: "♡";
-
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform: translate(-50%, -50%);
-
-            background: #fff8fb;
-
-            padding: 0 10px;
-
-            color: #d998b3;
-            font-size: 18px;
+        .spotify:hover {
+            transform: translateY(-2px);
+            background: #eeb5cb;
         }
 
 
         /* =========================
-           CONTADOR
+           SEÇÕES
         ========================= */
 
-        .countdown-section {
-            min-height: 70vh;
+        section {
+            padding: 90px 25px;
+        }
 
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
+        .section-title {
             text-align: center;
 
-            padding: 70px 25px;
-        }
-
-        .countdown-section h2 {
             font-family: "Cormorant Garamond", serif;
 
-            font-size: clamp(35px, 7vw, 55px);
+            font-size: clamp(40px, 8vw, 65px);
 
             font-weight: 500;
 
             color: #70485b;
 
-            margin-bottom: 15px;
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================
+           CARTA
+        ========================= */
+
+        .letter {
+            max-width: 750px;
+
+            margin: 0 auto;
+
+            background: rgba(255, 255, 255, 0.6);
+
+            padding: 45px 35px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(180, 123, 147, 0.10);
+        }
+
+        .letter p {
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: #80586a;
+
+            margin-bottom: 25px;
+        }
+
+        .letter p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           FOTOS
+        ========================= */
+
+        .photos {
+            max-width: 950px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .photo {
+            text-align: center;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            display: block;
+
+            box-shadow:
+                0 12px 30px
+                rgba(180, 123, 147, 0.15);
+        }
+
+        .photo p {
+            margin-top: 14px;
+
+            font-size: 14px;
+
+            color: #9a7181;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 300px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #f9dce8;
+
+            border-radius: 20px;
+
+            font-family: serif;
+
+            font-size: 70px;
+
+            color: #d998b3;
+        }
+
+
+        /* =========================
+           CONTAGEM
+        ========================= */
+
+        .countdown-section {
+            text-align: center;
         }
 
         .countdown-text {
-            color: #9a7080;
+            max-width: 600px;
 
-            font-size: 15px;
+            margin: -20px auto 40px;
 
-            margin-bottom: 40px;
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #8b6273;
         }
 
         .countdown {
-            display: flex;
+            max-width: 700px;
 
-            justify-content: center;
+            margin: 0 auto;
 
-            align-items: center;
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
 
             gap: 15px;
-
-            flex-wrap: wrap;
         }
 
         .time-box {
-            min-width: 90px;
+            background: rgba(255, 255, 255, 0.7);
 
-            padding: 18px 12px;
+            padding: 25px 10px;
 
-            background: rgba(255, 255, 255, 0.65);
-
-            border: 1px solid #f0d4df;
-
-            border-radius: 18px;
+            border-radius: 20px;
 
             box-shadow:
-                0 10px 30px
-                rgba(180, 123, 147, 0.08);
-
-            backdrop-filter: blur(5px);
+                0 10px 25px
+                rgba(180, 123, 147, 0.10);
         }
 
-        .time-number {
+        .time-box span {
             display: block;
 
             font-family: "Cormorant Garamond", serif;
 
-            font-size: 38px;
-
-            line-height: 1;
+            font-size: 42px;
 
             color: #70485b;
-
-            margin-bottom: 7px;
         }
 
-        .time-label {
-            font-size: 10px;
+        .time-box small {
+            font-size: 12px;
 
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
 
-            color: #b47b93;
+            color: #a47789;
         }
 
 
@@ -274,7 +365,7 @@
         ========================= */
 
         .ending {
-            min-height: 80vh;
+            min-height: 70vh;
 
             display: flex;
 
@@ -359,4 +450,336 @@
 
             .couple-drawing {
                 width: 95vw;
-                margin
+                margin: 25px auto 15px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .letter {
+                padding: 30px 22px;
+            }
+
+            .letter p {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .photos {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .photo img,
+            .photo-placeholder {
+                height: 330px;
+            }
+
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .time-box {
+                padding: 20px 8px;
+            }
+
+            .time-box span {
+                font-size: 36px;
+            }
+
+            .ending {
+                min-height: 60vh;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         APRESENTAÇÃO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="small-text">
+            01.09.2026 ♡
+        </div>
+
+        <h1>
+            um mês<br>
+            de nós
+        </h1>
+
+        <p>
+            um pequeno cantinho feito para guardar
+            um pouquinho do nosso primeiro mês juntos.
+        </p>
+
+        <img
+            class="couple-drawing"
+            src="Ilustracao_20260901_3_2.png"
+            alt="ilustração nossa"
+        >
+
+        <a
+            class="spotify"
+            href="https://open.spotify.com/track/6A2itXgDf96XHp9qR6oyPN"
+            target="_blank"
+        >
+            ♡ nossa música
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         CARTA
+    ========================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            uma cartinha pra você
+        </h2>
+
+        <div class="letter">
+
+            <p>
+                oii, meu gatinho! venho aqui comemorar o nosso primeiro mês juntinhos!!
+            </p>
+
+            <p>
+                saiba que eu sou eternamente grata por ter você na minha vida.
+                você me enche de vontade de viver, de aproveitar cada momento ao seu lado
+                e, principalmente, de te fazer feliz. muito obrigada por ser essa pessoa
+                incrível que sempre tenta fazer dar certo e que se esforça por nós.
+                eu valorizo muito tudo o que você faz por mim, até as coisinhas pequenas,
+                porque são elas que tornam tudo ainda mais especial.
+            </p>
+
+            <p>
+                eu tenho certeza de que você é o amor da minha vida, porque eu nunca
+                conheci alguém que me entendesse como você me entende. você me agrada,
+                faz o que eu gosto, realiza minhas vontades e sempre tenta me ver feliz.
+                além de ser o garoto mais lindo do mundo, de verdade. eu amo ficar vendo
+                suas fotinhas e fico rindo igual bobinha olhando pra você KKKKK.
+            </p>
+
+            <p>
+                esse nosso primeiro mês me fez perceber ainda mais o quanto eu amo ter
+                você comigo e o quanto quero continuar construindo muitas memórias ao
+                seu lado. e eu tô MUITO ansiosa pra outubro chegar logo, porque finalmente
+                vamos poder nos ver e viver tudo isso juntinhos de verdade.
+                só de pensar que vou poder te encontrar, ficar pertinho de você e
+                finalmente passar um tempinho ao seu lado, eu já fico toda bobinha.
+                mal posso esperar por esse dia!!
+            </p>
+
+            <p>
+                espero que esse seja só o começo de uma história muito, muito longa,
+                cheia de momentos bons, risadas, carinho e muito amor. obrigada por tudo,
+                meu amor. eu te amo muitão e tenho certeza de que esse é o primeiro mês
+                de muitos outros, MUITOS OUTROS!
+            </p>
+
+            <p>
+                feliz 1 mês pra nós!! 🩷
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOTOS
+    ========================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            nossos momentinhos
+        </h2>
+
+        <div class="photos">
+
+            <div class="photo">
+
+                <img
+                    src="content.png"
+                    alt="nosso momentinho"
+                >
+
+                <p>
+                    um dia vai ser a gente!!
+                </p>
+
+            </div>
+
+
+            <div class="photo">
+
+                <img
+                    src="image.png"
+                    alt="nosso momentinho"
+                >
+
+                <p>
+                    até nos joguinhos a gente fica juntinho ♡
+                </p>
+
+            </div>
+
+
+            <div class="photo">
+
+                <div class="photo-placeholder">
+                    ♡
+                </div>
+
+                <p>
+                    uma ajudinha da nossa amiga
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTAGEM
+    ========================= -->
+
+    <section class="countdown-section">
+
+        <h2 class="section-title">
+            até a gente se ver
+        </h2>
+
+        <p class="countdown-text">
+            agora só falta esperar mais um pouquinho
+            pra finalmente podermos nos encontrar em outubro. 🩷
+        </p>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>DIAS</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>HORAS</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>MINUTOS</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>SEGUNDOS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINALIZAÇÃO
+    ========================= -->
+
+    <section class="ending">
+
+        <h2>
+            ainda é só o começo ♡
+        </h2>
+
+        <p>
+            que esse seja só o primeiro de muitos meses,
+            muitas memórias e muitos momentos nossos.
+            e que outubro chegue logo, porque eu mal posso
+            esperar pra finalmente te ver. 🩷
+        </p>
+
+        <div class="heart">
+            ♡
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTADOR
+    ========================= -->
+
+    <script>
+
+        const targetDate = new Date("2026-10-28T00:00:00").getTime();
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+
+                return;
+            }
+
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
+
+            const hours = Math.floor(
+                (difference / (1000 * 60 * 60)) % 24
+            );
+
+            const minutes = Math.floor(
+                (difference / (1000 * 60)) % 60
+            );
+
+            const seconds = Math.floor(
+                (difference / 1000) % 60
+            );
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+
+    </script>
+
+</body>
+
+</html>
